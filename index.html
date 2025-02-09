@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý nhân sự</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
@@ -14,7 +14,128 @@
 </head>
 
 <body>
-
+    <div class="app">
+        <!-- Thanh điều hướng -->
+        <nav class="header__navbar">
+            <div class="header__navbar-list-background-color1">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item header__navbar-item--bold">
+                        <a href="" class="header__navbar-icon-link">
+                            <i class="fa-solid fa-people-roof header__navbar-icon header__navbar-icon-qlns"></i>
+                        </a>
+                        Trang Quản Trị
+                    </li>
+                </ul>
+            </div>
+            <div class="header__navbar-list-background-color2">
+                <ul class="header__navbar-list header__navbar-list-float">
+                    <li class="header__navbar-item header__navbar-item--has-message">
+                        <a href="" class="header__navbar-icon-link">
+                            <i class="header__navbar-icon fa-regular fa-envelope header__navbar-icon-hopthu"></i>
+                        </a>
+                        Hộp Thư
+                        <div class="header__message">
+                            <header class="header__message-header">
+                                <h3>Tin nhắn mới nhất</h3>
+                            </header>
+                            <ul class="header__message-list">
+                                <li class="header__message-item header__message-item--viewed">
+                                    <a href="" class="header__message-link">
+                                        <img src="./assets/img/Ảnh người dùng.png" alt="" class="header__message-img">
+                                        <div class="header__message-info">
+                                            <span class="header__message-name">Người dùng Nguyễn Văn A đã trả lời bình
+                                                luận của bạn</span>
+                                            <span class="header__message-description">Văn bản của công ty</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__message-item header__message-item--viewed">
+                                    <a href="" class="header__message-link">
+                                        <img src="./assets/img/Ảnh người dùng.png" alt="" class="header__message-img">
+                                        <div class="header__message-info">
+                                            <span class="header__message-name">Người dùng Nguyễn Văn B đã trả lời bình
+                                                luận của bạn</span>
+                                            <span class="header__message-description">Chữ ký của quản lý</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__message-item header__message-item--viewed">
+                                    <a href="" class="header__message-link">
+                                        <img src="./assets/img/Ảnh người dùng.png" alt="" class="header__message-img">
+                                        <div class="header__message-info">
+                                            <span class="header__message-name">Người dùng Nguyễn Văn C đã trả lời bình
+                                                luận của bạn</span>
+                                            <span class="header__message-description">Thông tin về ...</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <footer class="header__message-footer">
+                                <a href="" class="header__message-footer-btn">Xem tất cả</a>
+                            </footer>
+                        </div>
+                    </li>
+                    <li class="header__navbar-item header__navbar-item--has-notify">
+                        <a href="" class="header__navbar-icon-link">
+                            <i class="header__navbar-icon far fa-bell header__navbar-icon-thongbao"></i>
+                        </a>
+                        Thông báo
+                        <div class="header__notify">
+                            <header class="header__notify-header">
+                                <h3>Thông báo mới nhận</h3>
+                            </header>
+                            <ul class="header__notify-list">
+                                <li class="header__notify-item header__notify-item--viewed">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/img/Ảnh người dùng.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Duyệt đơn xin nghĩ phép</span>
+                                            <span class="header__notify-description">Người dùng Nguyễn Văn A yêu cầu
+                                                duyệt đơn nghĩ phép</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item header__notify-item--viewed">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/img/Ảnh người dùng.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Nhắc nhở lịch hợp, sự kiện</span>
+                                            <span class="header__notify-description">Thư ký nhắc nhở lịch hợp</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item header__notify-item--viewed">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/img/Ảnh người dùng.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Tính lương nhân viên</span>
+                                            <span class="header__notify-description">Thư ký gửi bảng lương của toàn bộ
+                                                nhân viên</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <footer class="header__notify-footer">
+                                <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                            </footer>
+                        </div>
+                    </li>
+                    <li class="header__navbar-item header__navbar-user header__navbar-item--bold">
+                        <img src="./assets/img/Ảnh người dùng.png" alt="" class="header__navbar-user-img">
+                        <span class="header__navbar-user-name"> Quốc Hòa</span>
+                        <ul class="header__navbar-user-menu">
+                            <li class="header__navbar-user-item">
+                                <a href="">Tài khoản của tôi</a>
+                            </li>
+                            <li class="header__navbar-user-item">
+                                <a href="">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 </body>
 
 </html>
