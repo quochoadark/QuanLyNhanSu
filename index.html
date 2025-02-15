@@ -81,13 +81,13 @@
                     </footer>
                 </div>
             </li>
-            <li class="header__navbar-item">
+            <li class="header__navbar-item nav-register js-open">
                 <span class="CSS-text-left-nav">Đăng ký</span>
             </li>
-            <li class="header__navbar-item ">
-                <span class="CSS-text-left-nav">Đăng nhập</span>
+            <li class="header__navbar-item js-open1 nav-login">
+                <span class="CSS-text-left-nav ">Đăng nhập</span>
             </li>
-            <li class="header__navbar-item header__navbar-user">
+            <li class="header__navbar-item header__navbar-user nav-user">
                 <img src="./assets/img/Ảnh người dùng.png" alt="" class="header__navbar-user-img">
                 <span class="header__navbar-user-name"> Quốc Hòa</span>
                 <ul class="header__navbar-user-menu">
@@ -108,5 +108,124 @@
         </ul>
     </nav>
 </header>
+<!-- Modal -->
+<div class="modal modal-register">
+    <div class="modal__body">
+        <div class="auth-form js-modalcontainer">
+            <div class="modal__close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="auth-form__container">
+                <div class="auth-form__header">
+                    <h3 class="auth-form__heading">Đăng ký</h3>
+                    <!-- Nút đăng nhập -->
+                    <span class="auth-form__switch-btn">Đăng nhập</span>
+                </div>
+                <div class="auth-form__form">
+                    <!-- Group dùng để nhóm các thẻ input vào-->
+                    <div class="auth-form__group">
+                        <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                    </div>
+                    <div class="auth-form__group">
+                        <input type="text" class="auth-form__input" placeholder="Mật khẩu">
+                    </div>
+                    <div class="auth-form__group">
+                        <input type="text" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                    </div>
+                </div>
+                <!-- Nút điều khiển -->
+                <div class="auth-form__controls">
+                    <button class="btn auth-form__controls-back btn--normal">TRỞ LẠI</button>
+                    <button class="btn btn--primary">ĐĂNG KÝ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal modal-login">
+    <div class="modal__body">
+        <div class="auth-form js-modalcontainer">
+            <div class="modal__close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading js-login-btn">Đăng nhập</h3>
+                        <span class="auth-form__switch-btn">Đăng ký</span>
+                    </div>
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Mật khẩu">
+                        </div>
+                    </div>
+                    <div class="auth-form__aside">
+                        <div class="auth-form__help">
+                            <a href="" class="auth-form__help-link auth-form__help-link-forgot">Quên mật khẩu</a>
+                            <span class="auth-form__help-separate"></span>
+                            <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
+                        </div>
+                    </div>
+                    <div class="auth-form__controls">
+                        <button class="btn auth-form__controls-back btn--normal">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const btnRegister = document.querySelectorAll(".js-open");
+        const btnLogin = document.querySelectorAll(".js-open1");
+        const modalRegister = document.querySelector(".modal-register");
+        const modalLogin = document.querySelector(".modal-login");
+        const closeRegister = document.querySelector(".modal-register .modal__close");
+        const closeLogin = document.querySelector(".modal-login .modal__close");
+
+        // Các nút trên navbar
+        const navRegister = document.querySelector(".nav-register");
+        const navLogin = document.querySelector(".nav-login");
+        const navUser = document.querySelector(".nav-user");
+
+        // Nút đăng nhập trong modal
+        const btnLoginConfirm = modalLogin.querySelector(".btn.btn--primary");
+
+        function showRegister() {
+            modalRegister.classList.add("open");
+        }
+        function showLogin() {
+            modalLogin.classList.add("open");
+        }
+        function hideRegister() {
+            modalRegister.classList.remove("open");
+        }
+        function hideLogin() {
+            modalLogin.classList.remove("open");
+        }
+
+        btnRegister.forEach(btn => btn.addEventListener("click", showRegister));
+        btnLogin.forEach(btn => btn.addEventListener("click", showLogin));
+        closeRegister.addEventListener("click", hideRegister);
+        closeLogin.addEventListener("click", hideLogin);
+
+        // Xử lý khi người dùng nhấn nút "Đăng nhập"
+        btnLoginConfirm.addEventListener("click", function () {
+            // Ẩn nút Đăng ký và Đăng nhập
+            navRegister.style.display = "none";
+            navLogin.style.display = "none";
+            // Hiển thị nút User
+            navUser.style.display = "flex";
+            // Đóng modal đăng nhập
+            hideLogin();
+        });
+    });
+
+</script>
 
 </html>
