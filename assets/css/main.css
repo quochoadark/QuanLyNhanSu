@@ -1,0 +1,428 @@
+/* Thanh NAv */
+.header {
+    height: var(--header-height);
+    background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list {
+    list-style: none;
+    /* lam cho mat khoang trang ben trai */
+    padding-left: 0;
+    margin: 4px 0 0 0;
+    display: flex;
+    padding: 15px;
+}
+
+/* Tach cac chu ra*/
+.header__navbar-item {
+    margin: 0 8px;
+    position: relative;
+    min-height: 26px;
+}
+
+/* lam cho may cai li thanh hang ngang */
+.header__navbar-item,
+.header__navbar-item-link {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: var(--white-color);
+    /* Bo cai gach chan */
+    text-decoration: none;
+    /* Thiet lap chu đậm hay nhạt */
+    font-weight: 300;
+}
+
+/* làm cho chữ mờ đi */
+.header__navbar-item:hover,
+.header__navbar-item-link:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header__navbar-icon-link {
+    color: var(--white-color);
+    text-decoration: none;
+    margin-top: 3px;
+}
+
+/* CSS cho các icon kích cỡ chữ và căn giữa  */
+.header__navbar-icon {
+    font-size: 1.8rem;
+    margin: 0 5px;
+}
+
+/* CSS cho các icon đứng cùng hầng với chữ */
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-item-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* CSS cho 2 icon bên trái  */
+
+.CSS-icon-open-list {
+    margin-left: 140px;
+    font-size: 25px;
+}
+
+.CSS-icon-QLNS {
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+.CSS-text-QLNS {
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+/* CSS cho bên phải */
+.CSS-icon-HopThu {
+    margin-top: 2px;
+}
+
+.CSS-text-left-nav {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/* CSS cho mail */
+.header__mail {
+    position: absolute;
+    top: 118%;
+    right: 0;
+    width: 404px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background-color: var(--white-color);
+    cursor: default;
+    transform-origin: calc(100% - 32px) top;
+    animation: headerNotifyGrowth ease-in 0.2s;
+    display: none;
+    will-change: opacity, transform;
+    z-index: 1;
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__mail-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header__mail-header h3 {
+    color: #999;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    margin: 0 0 0 12px;
+}
+
+.header__mail-list {
+    padding-left: 0;
+}
+
+.header__mail-item {
+    display: flex;
+}
+
+.header__mail-item:hover {
+    background-color: #f7f7f7;
+}
+
+.header__mail-item--viewed {
+    background-color: rgba(238, 75, 43, 0.08);
+}
+
+.header__mail-link {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.header__mail-img {
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__mail-info {
+    margin-left: 12px;
+}
+
+.header__mail-name {
+    display: block;
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 2.0rem;
+}
+
+.header__mail-description {
+    display: block;
+    font-size: 12px;
+    color: #756f6e;
+    margin-top: 2px;
+}
+
+
+.header__mail-footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.header__mail-footer-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 20px;
+    font-weight: 500;
+}
+
+.header__navbar-item--has-mail:hover .header__mail {
+    display: block;
+}
+
+.header__mail::before {
+    content: "";
+    border-width: 20px 27px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 4px;
+    top: -29px;
+}
+
+.header__mail::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -16px;
+    width: 90px;
+    height: 20px;
+}
+
+
+
+/* CSS cho thông báo */
+.header__notify {
+    position: absolute;
+    top: 118%;
+    right: 0;
+    width: 404px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background-color: var(--white-color);
+    cursor: default;
+    transform-origin: calc(100% - 32px) top;
+    animation: headerNotifyGrowth ease-in 0.2s;
+    display: none;
+    will-change: opacity, transform;
+    z-index: 1;
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header__notify-header h3 {
+    color: #999;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    margin: 0 0 0 12px;
+}
+
+.header__notify-list {
+    padding-left: 0;
+}
+
+.header__notify-item {
+    display: flex;
+}
+
+.header__notify-item:hover {
+    background-color: #f7f7f7;
+}
+
+.header__notify-item--viewed {
+    background-color: rgba(238, 75, 43, 0.08);
+}
+
+.header__notify-link {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.header__notify-img {
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__notify-info {
+    margin-left: 12px;
+}
+
+.header__notify-name {
+    display: block;
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 2.0rem;
+}
+
+.header__notify-description {
+    display: block;
+    font-size: 12px;
+    color: #756f6e;
+    margin-top: 2px;
+}
+
+
+.header__notify-footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.header__notify-footer-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 20px;
+    font-weight: 500;
+}
+
+.header__navbar-item--has-notify:hover .header__notify {
+    display: block;
+}
+
+.header__notify::before {
+    content: "";
+    border-width: 20px 27px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 4px;
+    top: -29px;
+}
+
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -16px;
+    width: 90px;
+    height: 20px;
+}
+
+/* CSS cho thong tin nguoi dung */
+.header__navbar-user {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header__navbar-user-img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.header__navbar-user-name {
+    margin-left: 4px;
+    font-size: 1.4rem;
+    font-weight: 400
+}
+
+.header__navbar-user-menu {
+    position: absolute;
+    padding-left: 0;
+    top: calc(100% + 6px);
+    right: 0;
+    border-radius: 2px;
+    width: 160px;
+    background-color: var(--white-color);
+    list-style: none;
+    z-index: 1;
+    box-shadow: 0 1px 2px #e0e0e0;
+    display: none;
+}
+
+.header__navbar-user-item {
+    margin-top: 8px;
+    font-weight: 400;
+}
+
+.header__navbar-user-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 16px;
+    display: block;
+    font-size: 1.4rem;
+}
+
+.header__navbar-user-item a:hover {
+    background-color: #fafafa;
+}
+
+.header__navbar-user-item a:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.header__navbar-user-item a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.header__navbar-user-menu::before {
+    content: "";
+    border-width: 15px 20px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 7px;
+    top: -25px;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu {
+    display: block;
+}
+
+.header__navbar-user-item--separate {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
