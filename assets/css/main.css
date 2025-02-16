@@ -1,7 +1,7 @@
 /* Thanh NAv */
 .header {
     height: var(--header-height);
-    background-image: linear-gradient(0, #fe6433, #f53e2d);
+    background: linear-gradient(to right, #34495e, #2c3e50);
 }
 
 .header__navbar {
@@ -13,7 +13,7 @@
     list-style: none;
     /* lam cho mat khoang trang ben trai */
     padding-left: 0;
-    margin: 4px 0 0 0;
+    margin: px 0 0 0;
     display: flex;
     padding: 15px;
 }
@@ -67,19 +67,13 @@
 /* CSS cho 2 icon bên trái  */
 
 .CSS-icon-open-list {
-    margin-left: 140px;
+    margin-left: 75px;
     font-size: 25px;
 }
 
 .CSS-icon-QLNS {
-    margin-left: 20px;
+    margin-left: 40px;
     font-size: 25px;
-}
-
-.CSS-text-QLNS {
-    font-weight: 500;
-    font-size: 20px;
-    margin-left: 3px;
 }
 
 /* CSS cho bên phải */
@@ -566,4 +560,125 @@
 
 .auth-form__help-link-forgot {
     color: var(--primary-color);
+}
+
+/* CSS sidebar */
+:root {
+    --base-clr: #11121a;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr: #e6e6ef;
+    --accent-clr: #5e63ff;
+    --secondary-text-clr: #b0b3c1;
+}
+
+.active {
+    margin-right: 50px;
+    padding: 0;
+    list-style: 1.5rem;
+
+}
+
+#sidebar {
+    padding: 5px 1em;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar a,
+#sidebar .dropdown-btn,
+#sidebar {
+    border-radius: .5em;
+    padding: .85em;
+    text-decoration: none;
+    color: var(--text-clr);
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.1em;
+}
+
+.dropdown-btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+#sidebar i {
+    flex-shrink: 0;
+    fill: var(--text-clr);
+}
+
+#sidebar a span,
+#sidebar .dropdown-btn span {
+    flex-grow: 1;
+}
+
+#sidebar a:hover,
+#sidebar .dropdown-btn:hover {
+    background-color: var(--hover-clr);
+}
+
+#sidebar .sub-menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 300ms ease-in-out;
+
+    >div {
+        overflow: hidden;
+    }
+
+}
+
+#sidebar .sub-menu.show {
+    grid-template-rows: 1fr;
+}
+
+.rotate i:last-child {
+    rotate: 180deg;
+}
+
+#sidebar .sub-menu a {
+    padding-left: 2em;
+}
+
+#toggle-btn {
+    margin-left: 20px;
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    background: none;
+    cursor: pointer;
+
+    i {
+        transition: rotate 150ms ease;
+    }
+}
+
+#sidebar .sub-menu a:hover {
+    background-color: var(--accent-clr);
+    color: white;
+}
+
+.tong-quan {
+    margin-left: 2px;
+}
+
+.nhan-vien {
+    margin-left: 4px;
+}
+
+.quan-ly-cong-tac {
+    margin-left: 3px;
 }
