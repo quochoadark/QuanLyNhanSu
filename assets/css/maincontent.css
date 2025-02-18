@@ -1,0 +1,34 @@
+/* Main Content */
+/* Chung cho tất cả */
+.width-header {
+    width: 615px;
+    background-color: white;
+}
+
+.width-header-full {
+    min-width: 100%;
+    background-color: white;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-light {
+    background-color: light;
+    border: none;
+    color: black;
+    padding: 6px;
+    text-align: center;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+/* Tổng quan */
+.CSS-Div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*  */

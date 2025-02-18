@@ -1,7 +1,32 @@
 /* Thanh NAv */
 .header {
     height: var(--header-height);
-    background: linear-gradient(to right, #34495e, #2c3e50);
+    background: linear-gradient(270deg, #34495e, #2c3e50);
+    background-size: 400% 400%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+}
+
+.padding-top {
+    padding-top: 60px;
+}
+
+@keyframes gradientFast {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .header__navbar {
@@ -121,9 +146,9 @@
 }
 
 .header__mail-header h3 {
-    color: #999;
+    color: black;
     margin: 0;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.4rem;
     line-height: 40px;
     margin: 0 0 0 12px;
@@ -138,11 +163,11 @@
 }
 
 .header__mail-item:hover {
-    background-color: #f7f7f7;
+    background-color: #CCCCCC;
 }
 
 .header__mail-item--viewed {
-    background-color: rgba(238, 75, 43, 0.08);
+    background-color: #fff;
 }
 
 .header__mail-link {
@@ -164,7 +189,7 @@
 .header__mail-name {
     display: block;
     font-size: 14px;
-    color: var(--text-color);
+    color: black;
     font-weight: 400;
     line-height: 2.0rem;
 }
@@ -172,7 +197,7 @@
 .header__mail-description {
     display: block;
     font-size: 12px;
-    color: #756f6e;
+    color: black;
     margin-top: 2px;
 }
 
@@ -250,7 +275,7 @@
 }
 
 .header__notify-header h3 {
-    color: #999;
+    color: black;
     margin: 0;
     font-weight: 400;
     font-size: 1.4rem;
@@ -267,11 +292,11 @@
 }
 
 .header__notify-item:hover {
-    background-color: #f7f7f7;
+    background-color: #CCCCCC;
 }
 
 .header__notify-item--viewed {
-    background-color: rgba(238, 75, 43, 0.08);
+    background-color: #fff;
 }
 
 .header__notify-link {
@@ -293,7 +318,7 @@
 .header__notify-name {
     display: block;
     font-size: 14px;
-    color: var(--text-color);
+    color: black;
     font-weight: 400;
     line-height: 2.0rem;
 }
@@ -301,7 +326,7 @@
 .header__notify-description {
     display: block;
     font-size: 12px;
-    color: #756f6e;
+    color: black;
     margin-top: 2px;
 }
 
@@ -391,7 +416,7 @@
 }
 
 .header__navbar-user-item a:hover {
-    background-color: #fafafa;
+    background-color: #CCCCCC;
 }
 
 .header__navbar-user-item a:first-child {
@@ -563,6 +588,26 @@
 }
 
 /* CSS sidebar */
+.col-2 {
+    background: linear-gradient(270deg, #1e3c72, #2a5298);
+    background-size: 400% 400%;
+    animation: gradientFlow 5s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 :root {
     --base-clr: #11121a;
     --line-clr: #42434a;
@@ -587,6 +632,21 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 60px);
+    /* Cuộn sidebar */
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* Khi cuộn hết không lan ra ngoài */
+    overscroll-behavior: contain;
+}
+
+.col-10 {
+    margin-left: 250px;
 }
 
 #sidebar ul {
@@ -623,6 +683,12 @@
 #sidebar a span,
 #sidebar .dropdown-btn span {
     flex-grow: 1;
+}
+
+#sidebar a,
+#sidebar .dropdown-btn,
+#sidebar .sub-menu li a {
+    font-weight: 500;
 }
 
 #sidebar a:hover,
