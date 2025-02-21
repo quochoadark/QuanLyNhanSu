@@ -741,10 +741,20 @@
     margin-left: 2px;
 }
 
-.nhan-vien {
+.quan-ly-danh-muc {
     margin-left: 4px;
 }
 
 .quan-ly-cong-tac {
     margin-left: 3px;
+}
+
+/* Hover */
+.active-item {
+    background-color: #5e63ff !important;
+}
+
+/* Màu khi hover vào một mục không phải active */
+.hover-effect {
+    background-color: green !important;
 }

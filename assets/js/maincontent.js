@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.col-10 > div').forEach(div => {
         div.style.display = 'none';
     });
-    const tongQuanSection = document.querySelector('.tongquan');
+    const tongQuanSection = document.querySelector('.thongke');
     if (tongQuanSection) {
         tongQuanSection.style.display = 'block';
     }
@@ -17,6 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (section) {
             section.style.display = 'block';
         }
+    }
+    const thongkeLink = document.querySelector('.Menu-TK a');
+    if (thongkeLink) {
+        thongkeLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            showSection('thongke');
+        });
     }
     const danhSachNhanVienLink = document.querySelector('.Menu-DSNV a');
     if (danhSachNhanVienLink) {
@@ -67,18 +74,11 @@ document.addEventListener("DOMContentLoaded", function () {
             showSection('bangcap');
         });
     }
-    const loainhanvienLink = document.querySelector('.Menu-LNV a');
-    if (loainhanvienLink) {
-        loainhanvienLink.addEventListener('click', function (e) {
+    const nhanvienLink = document.querySelector('.Menu-NV a');
+    if (nhanvienLink) {
+        nhanvienLink.addEventListener('click', function (e) {
             e.preventDefault();
-            showSection('loainhanvien');
-        });
-    }
-    const themmoinhanvienLink = document.querySelector('.Menu-TMNV a');
-    if (themmoinhanvienLink) {
-        themmoinhanvienLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            showSection('themmoinhanvien');
+            showSection('nhanvien');
         });
     }
     const bangtinhluongLink = document.querySelector('.Menu-BTL a');
@@ -137,4 +137,33 @@ document.addEventListener("DOMContentLoaded", function () {
             showSection('kyluat');
         });
     }
+
+    // Cố định hover
+    const menuItems = document.querySelectorAll("#sidebar a");
+    let activeItem = document.querySelector(".active-item"); // Lưu trữ mục active hiện tại
+
+    menuItems.forEach(item => {
+        // Khi click, đặt mục đó thành active
+        item.addEventListener("click", function () {
+            // Loại bỏ class active-item khỏi tất cả mục
+            menuItems.forEach(i => i.classList.remove("active-item"));
+
+            // Đặt class active-item cho mục mới được chọn
+            this.classList.add("active-item");
+            activeItem = this; // Cập nhật mục active hiện tại
+        });
+
+        // Khi di chuột vào, đổi hiệu ứng hover mà không ảnh hưởng mục đang active
+        item.addEventListener("mouseover", function () {
+            if (this !== activeItem) {
+                this.classList.add("hover-effect");
+            }
+        });
+
+        // Khi di chuột ra, chỉ bỏ hiệu ứng hover nếu không phải là mục active
+        item.addEventListener("mouseout", function () {
+            this.classList.remove("hover-effect");
+        });
+    });
+
 });
