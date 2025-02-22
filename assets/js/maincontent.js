@@ -81,11 +81,11 @@ document.addEventListener("DOMContentLoaded", function () {
             showSection('nhanvien');
         });
     }
-    const bangtinhluongLink = document.querySelector('.Menu-BTL a');
+    const bangtinhluongLink = document.querySelector('.Menu-BL a');
     if (bangtinhluongLink) {
         bangtinhluongLink.addEventListener('click', function (e) {
             e.preventDefault();
-            showSection('bangtinhluong');
+            showSection('bangluong');
         });
     }
     const tinhluongLink = document.querySelector('.Menu-TL a');

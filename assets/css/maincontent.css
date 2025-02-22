@@ -124,3 +124,28 @@ select {
 
 /*  Danh sach nhan vien*/
 /*  Phòng ban */
+/* Khen thuong */
+.custom-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #f8f9fa;
+}
+
+.custom-btn i {
+    margin-right: 8px;
+}
