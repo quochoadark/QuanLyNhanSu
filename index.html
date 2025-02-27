@@ -20,11 +20,11 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- Js cho nav -->
-    <script type="text/javascript" src="/assets/js/nav.js" defer></script>
+    <script type="text/javascript" src="./assets/js/nav.js" defer></script>
     <!-- Js cho sidebar -->
-    <script type="text/javascript" src="/assets/js/sidebar.js" defer></script>
+    <script type="text/javascript" src="./assets/js/sidebar.js" defer></script>
     <!-- Js cho maincontent -->
-    <script type="text/javascript" src="/assets/js/maincontent.js" defer></script>
+    <script type="text/javascript" src="./assets/js/maincontent.js" defer></script>
 </head>
 
 <body>
@@ -878,6 +878,8 @@
                                     <th scope="col">Truy cập</th>
                                     <th scope="col">Quyền hạn</th>
                                     <th scope="col">Trạng thái</th>
+                                    <th scope="col">Sửa</th>
+                                    <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -889,6 +891,14 @@
                                     <td>15</td>
                                     <td>Quản trị viên</td>
                                     <td>Đang hoạt động</td>
+                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
+                                                class="fas fa-edit fs-5"></i>
+                                        </button>
+                                    </td>
+                                    <td><button class="shadow p-2" style="background-color: red;"><i
+                                                class="fas fa-trash fs-5"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -898,6 +908,14 @@
                                     <td>10</td>
                                     <td>Trưởng phòng nhân sự</td>
                                     <td>Đang hoạt động</td>
+                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
+                                                class="fas fa-edit fs-5"></i>
+                                        </button>
+                                    </td>
+                                    <td><button class="shadow p-2" style="background-color: red;"><i
+                                                class="fas fa-trash fs-5"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -907,6 +925,14 @@
                                     <td>8</td>
                                     <td>Nhân viên kế toán</td>
                                     <td>Đang hoạt động</td>
+                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
+                                                class="fas fa-edit fs-5"></i>
+                                        </button>
+                                    </td>
+                                    <td><button class="shadow p-2" style="background-color: red;"><i
+                                                class="fas fa-trash fs-5"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
@@ -916,6 +942,14 @@
                                     <td>2</td>
                                     <td>Giấm đốc</td>
                                     <td>Đang hoạt động</td>
+                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
+                                                class="fas fa-edit fs-5"></i>
+                                        </button>
+                                    </td>
+                                    <td><button class="shadow p-2" style="background-color: red;"><i
+                                                class="fas fa-trash fs-5"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -2267,6 +2301,10 @@
                             <input type="text" style="width: 100%">
                         </div>
                         <div class="CSS-Div1 mt-3">
+                            <h5 class="fs-5">Mã nhân viên:</h5>
+                            <input type="text" style="width: 100%">
+                        </div>
+                        <div class="CSS-Div1 mt-3">
                             <h5 class="fs-5">Ngày nhận:</h5>
                             <input type="text" style="width: 100%">
                         </div>
@@ -2702,7 +2740,7 @@
                                 Tạo</button>
                         </div>
                         <div class="content-KhenThuong p-3 rounded-3 shadow width-content-full">
-                            <span class="fs-4">Danh sách chức vụ</span>
+                            <span class="fs-4">Danh sách khen thưởng</span>
                             <div class="header-khenthuong mt-3 d-flex">
                                 <div class="header-khenthuong1">
                                     <span class="fs-5">Show</span>
@@ -2865,7 +2903,7 @@
                                 Tạo</button>
                         </div>
                         <div class="content-KyLuat p-3 rounded-3 shadow width-content-full">
-                            <span class="fs-4">Danh sách chức vụ</span>
+                            <span class="fs-4">Danh sách kỷ luật</span>
                             <div class="header-kyluat mt-3 d-flex">
                                 <div class="header-kyluat1">
                                     <span class="fs-5">Show</span>
