@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.col-10 > div').forEach(div => {
         div.style.display = 'none';
     });
-    const tongQuanSection = document.querySelector('.thongke');
+    const tongQuanSection = document.querySelector('.danhsachnhanvien');
     if (tongQuanSection) {
         tongQuanSection.style.display = 'block';
     }
@@ -18,13 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
             section.style.display = 'block';
         }
     }
-    const thongkeLink = document.querySelector('.Menu-TK a');
-    if (thongkeLink) {
-        thongkeLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            showSection('thongke');
-        });
-    }
     const danhSachNhanVienLink = document.querySelector('.Menu-DSNV a');
     if (danhSachNhanVienLink) {
         danhSachNhanVienLink.addEventListener('click', function (e) {
@@ -37,6 +30,41 @@ document.addEventListener("DOMContentLoaded", function () {
         danhSachTaiKhoanLink.addEventListener('click', function (e) {
             e.preventDefault();
             showSection('danhsachtaikhoan');
+        });
+    }
+    const danhSachPhongBanLink = document.querySelector('.Menu-DSPB a');
+    if (danhSachPhongBanLink) {
+        danhSachPhongBanLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            showSection('danhsachphongban');
+        });
+    }
+    const danhSachChucVuLink = document.querySelector('.Menu-DSCV a');
+    if (danhSachChucVuLink) {
+        danhSachChucVuLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            showSection('danhsachchucvu');
+        });
+    }
+    const danhSachTrinhDoLink = document.querySelector('.Menu-DSTD a');
+    if (danhSachTrinhDoLink) {
+        danhSachTrinhDoLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            showSection('danhsachtrinhdo');
+        });
+    }
+    const danhSachChuyenMonLink = document.querySelector('.Menu-DSCM a');
+    if (danhSachChuyenMonLink) {
+        danhSachChuyenMonLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            showSection('danhsachchuyenmon');
+        });
+    }
+    const danhSachBangCapLink = document.querySelector('.Menu-DSBC a');
+    if (danhSachBangCapLink) {
+        danhSachBangCapLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            showSection('danhsachbangcap');
         });
     }
     const phongbanLink = document.querySelector('.Menu-PB a');

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý nhân sự</title>
+    <title>Nhân viên thường</title>
     <!--  -->
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
@@ -207,49 +207,16 @@
 
                         </ul>
                     </li>
-                    <li class>
-                        <button onclick=ToggleSubMenu(this) class="dropdown-btn">
-                            <i class="fa-solid fa-user"></i>
-                            <span class="quan-ly-ho-so">Quản lý hồ sơ</span>
-                            <i class="fa-solid fa-angle-down"></i>
-                        </button>
-                        <ul class="sub-menu show">
-                            <div>
-                                <li class="Menu-PB">
-                                    <a href="">Phòng ban</a>
-                                </li>
-                                <li class="Menu-CV">
-                                    <a href="">Chức vụ</a>
-                                </li>
-                                <li class="Menu-TD">
-                                    <a href="">Trình độ</a>
-                                </li>
-                                <li class="Menu-CM">
-                                    <a href="">Chuyên môn</a>
-                                </li>
-                                <li class="Menu-BC">
-                                    <a href="">Bằng cấp</a>
-                                </li>
-                                <li class="Menu-NV">
-                                    <a href="">Nhân viên</a>
-                                </li>
-                            </div>
-
-                        </ul>
-                    </li>
                     <li class="">
                         <button onclick=ToggleSubMenu(this) class="dropdown-btn">
                             <i class="fa-solid fa-money-check-dollar"></i>
-                            <span class="quan-ly-luong">Quản lý lương</span>
+                            <span class="quan-ly-luong">Lương</span>
                             <i class="fa-solid fa-angle-down"></i>
                         </button>
                         <ul class="sub-menu show">
                             <div>
                                 <li class="Menu-BL">
-                                    <a href="">Bảng lương</a>
-                                </li>
-                                <li class="Menu-TL">
-                                    <a href="">Tính lương </a>
+                                    <a href="">Xem lương</a>
                                 </li>
                             </div>
 
@@ -258,16 +225,13 @@
                     <li class="">
                         <button onclick=ToggleSubMenu(this) class="dropdown-btn">
                             <i class="fa-solid fa-calendar-check"></i>
-                            <span class="quan-ly-cong-tac">Quản lý công tác</span>
+                            <span class="quan-ly-cong-tac">Công tác</span>
                             <i class="fa-solid fa-angle-down"></i>
                         </button>
                         <ul class="sub-menu show">
                             <div>
-                                <li class="Menu-TCT">
-                                    <a href="">Tạo công tác</a>
-                                </li>
                                 <li class="Menu-DSCT">
-                                    <a href="">Danh sách công tác</a>
+                                    <a href="">Xem công tác</a>
                                 </li>
                             </div>
 
@@ -276,16 +240,13 @@
                     <li class="">
                         <button onclick=ToggleSubMenu(this) class="dropdown-btn">
                             <i class="fa-solid fa-people-group"></i>
-                            <span class="nhom-nhan-vien">Nhóm nhân viên</span>
+                            <span class="nhom-nhan-vien">Nhóm</span>
                             <i class="fa-solid fa-angle-down"></i>
                         </button>
                         <ul class="sub-menu show">
                             <div>
-                                <li class="Menu-TN">
-                                    <a href="">Tạo nhóm</a>
-                                </li>
                                 <li class="Menu-DSN">
-                                    <a href="">Danh sách nhóm</a>
+                                    <a href="">Xem nhóm</a>
                                 </li>
                             </div>
 
@@ -300,10 +261,10 @@
                         <ul class="sub-menu show">
                             <div>
                                 <li class="Menu-KT">
-                                    <a href="">Khen thưởng</a>
+                                    <a href="">Xem Khen thưởng</a>
                                 </li>
                                 <li class="Menu-KL">
-                                    <a href="">Kỷ luật</a>
+                                    <a href="">Xem Kỷ luật</a>
                                 </li>
                             </div>
 
@@ -354,8 +315,6 @@
                                     <th scope="col">Điện thoại</th>
                                     <th scope="col">Địa chỉ</th>
                                     <th scope="col">Tình trạng</th>
-                                    <th scope="col">Sửa</th>
-                                    <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -370,14 +329,6 @@
                                     <td>123456789</td>
                                     <td>đường Trần Hưng Đạo quận 5</td>
                                     <td>Đang làm việc</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -390,14 +341,6 @@
                                     <td>123456789</td>
                                     <td>đường Triệu Quang Phục quận 5</td>
                                     <td>Đang làm việc</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -410,14 +353,6 @@
                                     <td>123456789</td>
                                     <td>đường Trần Hưng Đạo quận 5</td>
                                     <td>Đang làm việc</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
@@ -430,14 +365,6 @@
                                     <td>123456789</td>
                                     <td>đường Trần Hưng Đạo quận 5</td>
                                     <td>Đã nghĩ việc</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
@@ -450,14 +377,6 @@
                                     <td>123456789</td>
                                     <td>đường Trần Hưng Đạo quận 5</td>
                                     <td>Đang làm việc</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">6 </th>
@@ -470,14 +389,6 @@
                                     <td>123456789</td>
                                     <td>đường Trần Hưng Đạo quận 5</td>
                                     <td>Đang làm việc</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">7 </th>
@@ -490,14 +401,6 @@
                                     <td>123456789</td>
                                     <td>đường Trần Hưng Đạo quận 5</td>
                                     <td>Đang làm việc</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">8 </th>
@@ -510,14 +413,6 @@
                                     <td>123456789</td>
                                     <td>đường Trần Hưng Đạo quận 5</td>
                                     <td>Đang làm việc</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">9 </th>
@@ -530,14 +425,6 @@
                                     <td>123456789</td>
                                     <td>đường Trần Hưng Đạo quận 5</td>
                                     <td>Đang làm việc</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">10 </th>
@@ -550,14 +437,6 @@
                                     <td>123456789</td>
                                     <td>đường Trần Hưng Đạo quận 5</td>
                                     <td>Đang làm việc</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -612,8 +491,6 @@
                                     <th scope="col">Truy cập</th>
                                     <th scope="col">Quyền hạn</th>
                                     <th scope="col">Trạng thái</th>
-                                    <th scope="col">Sửa</th>
-                                    <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -625,14 +502,6 @@
                                     <td>15</td>
                                     <td>Quản trị viên</td>
                                     <td>Đang hoạt động</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -642,14 +511,6 @@
                                     <td>10</td>
                                     <td>Trưởng phòng nhân sự</td>
                                     <td>Đang hoạt động</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -659,14 +520,6 @@
                                     <td>8</td>
                                     <td>Nhân viên kế toán</td>
                                     <td>Đang hoạt động</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
@@ -676,14 +529,6 @@
                                     <td>2</td>
                                     <td>Giấm đốc</td>
                                     <td>Đang hoạt động</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -738,8 +583,6 @@
                                     <th scope="col">Người tạo</th>
                                     <th scope="col">Ngày tạo</th>
                                     <th scope="col">Ngày sữa</th>
-                                    <th scope="col">Sửa</th>
-                                    <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -751,14 +594,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -768,14 +603,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>28/2/2025</td>
                                     <td>29/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -785,14 +612,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
@@ -802,14 +621,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
@@ -819,14 +630,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -881,8 +684,6 @@
                                     <th scope="col">Người tạo</th>
                                     <th scope="col">Ngày tạo</th>
                                     <th scope="col">Ngày sữa</th>
-                                    <th scope="col">Sửa</th>
-                                    <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -894,14 +695,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -911,14 +704,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -928,14 +713,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
@@ -945,14 +722,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
@@ -962,14 +731,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1024,8 +785,6 @@
                                     <th scope="col">Người tạo</th>
                                     <th scope="col">Ngày tạo</th>
                                     <th scope="col">Ngày sữa</th>
-                                    <th scope="col">Sửa</th>
-                                    <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1037,14 +796,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -1054,14 +805,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>28/2/2025</td>
                                     <td>29/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -1071,14 +814,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
@@ -1088,14 +823,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
@@ -1105,14 +832,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1167,8 +886,6 @@
                                     <th scope="col">Người tạo</th>
                                     <th scope="col">Ngày tạo</th>
                                     <th scope="col">Ngày sữa</th>
-                                    <th scope="col">Sửa</th>
-                                    <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1180,14 +897,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -1197,14 +906,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -1214,14 +915,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
@@ -1231,14 +924,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
@@ -1248,14 +933,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1310,8 +987,6 @@
                                     <th scope="col">Người tạo</th>
                                     <th scope="col">Ngày tạo</th>
                                     <th scope="col">Ngày sữa</th>
-                                    <th scope="col">Sửa</th>
-                                    <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1323,14 +998,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -1340,14 +1007,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -1357,14 +1016,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
@@ -1374,14 +1025,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
@@ -1391,14 +1034,6 @@
                                     <td>Nguyễn Văn A</td>
                                     <td>27/2/2025</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1411,214 +1046,6 @@
                                 <span>1</span>
                                 <button class="shadow mx-1 button-light">Next</button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="phong-ban">
-                    <div class="header-PhongBan d-flex">
-                        <span class="fs-4 p-4">Phòng ban</span>
-                        <span class="fs-4 p-4">Tạo phòng ban</span>
-                    </div>
-                    <div class="content-PhongBan width-content-full">
-                        <span class="fs-4 mx-3">Tạo phòng ban</span>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Mã phòng ban:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Tên phòng ban:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5>Mô tả</h5>
-                            <textarea name="" id="" style="width: 100%;height: 300px"></textarea>
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Người tạo:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Ngày tạo:</h5>
-                            <input type="text" style="width: 100%">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tạo</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="chuc-vu">
-                    <div class="header-ChucVu d-flex">
-                        <span class="fs-4 p-4">Chức vụ</span>
-                        <span class="fs-4 p-4">Tạo chức vụ</span>
-                    </div>
-                    <div class="content-ChucVu width-content-full">
-                        <span class="fs-4 mx-3">Tạo chức vụ</span>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Mã chức vụ:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Tên chức vụ:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5>Mô tả</h5>
-                            <textarea name="" id="" style="width: 100%;height: 300px"></textarea>
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Người tạo:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Ngày tạo:</h5>
-                            <input type="text" style="width: 100%">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tạo</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="trinhdo">
-                    <div class="header-TrinhDo d-flex">
-                        <span class="fs-4 p-4">Trình độ</span>
-                        <span class="fs-4 p-4">Tạo trình độ</span>
-                    </div>
-                    <div class="content-TrinhDo width-content-full">
-                        <span class="fs-4 mx-3">Tạo trình độ</span>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Mã trình độ:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Tên trình độ:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5>Mô tả</h5>
-                            <textarea name="" id="" style="width: 100%;height: 300px"></textarea>
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Người tạo:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Ngày tạo:</h5>
-                            <input type="text" style="width: 100%">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tạo</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="chuyenmon">
-                    <div class="header-ChuyenMon d-flex">
-                        <span class="fs-4 p-4">Phòng ban</span>
-                        <span class="fs-4 p-4">Tạo phòng ban</span>
-                    </div>
-                    <div class="content-ChuyenMon width-content-full">
-                        <span class="fs-4 mx-3">Tạo phòng ban</span>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Mã phòng ban:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Tên phòng ban:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5>Mô tả</h5>
-                            <textarea name="" id="" style="width: 100%;height: 300px"></textarea>
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Người tạo:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Ngày tạo:</h5>
-                            <input type="text" style="width: 100%">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tạo</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="bangcap">
-                    <div class="header-BangCap d-flex">
-                        <span class="fs-4 p-4">Bằng cấp</span>
-                        <span class="fs-4 p-4">Tạo bằng cấp</span>
-                    </div>
-                    <div class="content-BangCap width-content-full">
-                        <span class="fs-4 mx-3">Tạo bằng cấp</span>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Mã bằng cấp:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Tên bằng cấp:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5>Mô tả</h5>
-                            <textarea name="" id="" style="width: 100%;height: 300px"></textarea>
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Người tạo:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Ngày tạo:</h5>
-                            <input type="text" style="width: 100%">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tạo</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="nhanvien">
-                    <div class="header-TaoNhanVien d-flex">
-                        <span class="fs-4 p-4">Nhân viên</span>
-                        <span class="fs-4 p-4">Tạo nhân viên</span>
-                    </div>
-                    <div class="content-TaoNhanVien width-content-full">
-                        <span class="fs-4 mx-3">Tạo nhân viên</span>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Mã nhân viên:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Tên nhân viên:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Giới tính:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Ngày sinh:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Dân tộc:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Nơi sinh:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Điện thoại:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Địa chỉ:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Tình trạng:</h5>
-                            <input type="text" style="width: 100%">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tạo</button>
                         </div>
                     </div>
                 </div>
@@ -1661,8 +1088,6 @@
                                     <th scope="col">Trừ lương</th>
                                     <th scope="col">Thực lãnh</th>
                                     <th scope="col">Chi tiết</th>
-                                    <th scope="col">Sửa</th>
-                                    <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1677,18 +1102,6 @@
                                     <td>3.000.000</td>
                                     <td>1.000.000</td>
                                     <td>13.000.000</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: blue;"><i
-                                                class="fas fa-eye fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -1701,18 +1114,6 @@
                                     <td>3.000.000</td>
                                     <td>1.000.000</td>
                                     <td>13.000.000</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: blue;"><i
-                                                class="fas fa-eye fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -1725,18 +1126,6 @@
                                     <td>3.000.000</td>
                                     <td>1.000.000</td>
                                     <td>13.000.000</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: blue;"><i
-                                                class="fas fa-eye fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
@@ -1749,18 +1138,6 @@
                                     <td>3.000.000</td>
                                     <td>1.000.000</td>
                                     <td>13.000.000</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: blue;"><i
-                                                class="fas fa-eye fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
@@ -1773,18 +1150,6 @@
                                     <td>3.000.000</td>
                                     <td>1.000.000</td>
                                     <td>13.000.000</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: blue;"><i
-                                                class="fas fa-eye fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1800,116 +1165,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="tinhluong">
-                    <div class="header-TinhLuong d-flex">
-                        <span class="fs-4 p-4">Tính lương</span>
-                        <span class="fs-4 p-4">Tính lương nhân viên</span>
-                    </div>
-                    <div class="content-TinhLuong width-content-full">
-                        <span class="fs-4 mx-3">Tính lương nhân viên</span>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Mã lương:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Mã nhân viên:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Ngày nhận:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Lương cơ bản:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Chấm công:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Phụ cấp:</h5>
-                            <input type="text" style="width: 50%">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tính phụ cấp</button>
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Ứng lương:</h5>
-                            <input type="text" style="width: 50%">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tính ứng lương</button>
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Trừ lương:</h5>
-                            <input type="text" style="width: 50%">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tính trừ lương</button>
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Thực lãnh</h5>
-                            <input type="text" style="width: 50%">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tính thực lãnh</button>
-                        </div>
-                        <div class="CSS-Div1">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tạo</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="taocongtac">
-                    <div class="header-TaoCongTac d-flex">
-                        <span class="fs-4 p-4">Công tác</span>
-                        <span class="fs-4 p-4">Tạo công tác</span>
-                    </div>
-                    <div class="content-TaoCongTac width-content-full">
-                        <span class="fs-4 mx-3">Tạo công tác</span>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Mã công tác:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Chọn nhân viên:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Ngày bắt đầu:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Ngày kết thúc:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Địa điểm công tác:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Mục đích:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Người tạo:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Ngày tạo:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tạo</button>
-                        </div>
-                    </div>
-                </div>
                 <div class="danhsachcongtac">
-                    <div class="content-DanhSachCongTac p-3 rounded-3 shadow width-content-full">
+                    <div class="content-DanhSachCongTac p-3 rounded-3 shadow width-content-full mt-5">
                         <span class="fs-4">Danh sách công tác</span>
                         <div class="header-danhsachcongtac mt-3 d-flex">
                             <div class="header-danhsachcongtac1">
@@ -1944,8 +1201,6 @@
                                     <th scope="col">Ngày kết thúc</th>
                                     <th scope="col">Địa điểm</th>
                                     <th scope="col">Mục đích</th>
-                                    <th scope="col">Sửa</th>
-                                    <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1958,14 +1213,6 @@
                                     <td>28/2/2025</td>
                                     <td>Đà Nẵng</td>
                                     <td>Ký hợp đồng với đối tác B</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -1976,14 +1223,6 @@
                                     <td>28/2/2025</td>
                                     <td>Đà Nẵng</td>
                                     <td>Ký hợp đồng với đối tác B</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -1994,14 +1233,6 @@
                                     <td>28/2/2025</td>
                                     <td>Đà Nẵng</td>
                                     <td>Ký hợp đồng với đối tác B</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
@@ -2012,14 +1243,6 @@
                                     <td>28/2/2025</td>
                                     <td>Đà Nẵng</td>
                                     <td>Ký hợp đồng với đối tác B</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
@@ -2030,14 +1253,6 @@
                                     <td>28/2/2025</td>
                                     <td>Đà Nẵng</td>
                                     <td>Ký hợp đồng với đối tác B</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -2053,42 +1268,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="taonhom">
-                    <div class="header-TaoNhom d-flex">
-                        <span class="fs-4 p-4">Nhóm nhân viên</span>
-                        <span class="fs-4 p-4">Tạo nhóm</span>
-                    </div>
-                    <div class="content-TaoNhom width-content-full">
-                        <span class="fs-4 mx-3">Tạo nhóm</span>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Mã nhóm:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Tên nhóm:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Mô tả:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Người tạo:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Ngày tạo:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tạo</button>
-                        </div>
-                    </div>
-                </div>
                 <div class="danhsachnhom">
-                    <div class="content-DanhSachNhom p-3 rounded-3 shadow width-content-full">
+                    <div class="content-DanhSachNhom p-3 rounded-3 shadow width-content-full mt-5">
                         <span class="fs-4">Danh sách nhóm</span>
                         <div class="header-danhsachnhom mt-3 d-flex">
                             <div class="header-danhsachnhom1">
@@ -2121,8 +1302,6 @@
                                     <th scope="col">Mô tả</th>
                                     <th scope="col">Ngưởi tạo</th>
                                     <th scope="col">Ngày tạo</th>
-                                    <th scope="col">Sửa</th>
-                                    <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -2133,14 +1312,6 @@
                                     <td></td>
                                     <td>Nguyễn Văn A</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -2149,14 +1320,6 @@
                                     <td></td>
                                     <td>Nguyễn Văn A</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -2165,14 +1328,6 @@
                                     <td></td>
                                     <td>Nguyễn Văn A</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
@@ -2181,14 +1336,6 @@
                                     <td></td>
                                     <td>Nguyễn Văn A</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
@@ -2197,14 +1344,6 @@
                                     <td></td>
                                     <td>Nguyễn Văn A</td>
                                     <td>28/2/2025</td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                class="fas fa-edit fs-5"></i>
-                                        </button>
-                                    </td>
-                                    <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                class="fas fa-trash fs-5"></i>
-                                        </button>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -2221,35 +1360,7 @@
                     </div>
                 </div>
                 <div class="khenthuong">
-                    <div class="header-KhenThuong d-flex">
-                        <span class="fs-4 p-4">Khen Thưởng</span>
-                        <span class="fs-4 p-4">Tạo khen thưởng</span>
-                    </div>
-                    <div class="content-KhenThuong width-content-full">
-                        <span class="fs-4 mx-3">Tạo khen thưởng</span>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Mã khen thưởng:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Loại khen thưởng:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5>Mô tả</h5>
-                            <textarea name="" id="" style="width: 100%;height: 300px"></textarea>
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Người tạo:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Ngày tạo:</h5>
-                            <input type="text" style="width: 100%">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tạo</button>
-                        </div>
+                    <div class="content-KhenThuong width-content-full mt-5">
                         <div class="content-KhenThuong p-3 rounded-3 shadow width-content-full">
                             <span class="fs-4">Danh sách khen thưởng</span>
                             <div class="header-khenthuong mt-3 d-flex">
@@ -2283,8 +1394,6 @@
                                         <th scope="col">Mô tả</th>
                                         <th scope="col">Người tạo</th>
                                         <th scope="col">Ngày tạo</th>
-                                        <th scope="col">Sửa</th>
-                                        <th scope="col">Xóa</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -2295,14 +1404,6 @@
                                         <td></td>
                                         <td>Nguyễn Văn A</td>
                                         <td>28/2/2025</td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                    class="fas fa-edit fs-5"></i>
-                                            </button>
-                                        </td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                    class="fas fa-trash fs-5"></i>
-                                            </button>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
@@ -2311,14 +1412,6 @@
                                         <td></td>
                                         <td>Nguyễn Văn A</td>
                                         <td>28/2/2025</td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                    class="fas fa-edit fs-5"></i>
-                                            </button>
-                                        </td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                    class="fas fa-trash fs-5"></i>
-                                            </button>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
@@ -2327,14 +1420,6 @@
                                         <td></td>
                                         <td>Nguyễn Văn A</td>
                                         <td>28/2/2025</td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                    class="fas fa-edit fs-5"></i>
-                                            </button>
-                                        </td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                    class="fas fa-trash fs-5"></i>
-                                            </button>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">4</th>
@@ -2343,14 +1428,6 @@
                                         <td></td>
                                         <td>Nguyễn Văn A</td>
                                         <td>28/2/2025</td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                    class="fas fa-edit fs-5"></i>
-                                            </button>
-                                        </td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                    class="fas fa-trash fs-5"></i>
-                                            </button>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">5</th>
@@ -2359,14 +1436,6 @@
                                         <td></td>
                                         <td>Nguyễn Văn A</td>
                                         <td>28/2/2025</td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                    class="fas fa-edit fs-5"></i>
-                                            </button>
-                                        </td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                    class="fas fa-trash fs-5"></i>
-                                            </button>
-                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -2384,170 +1453,99 @@
                     </div>
                 </div>
                 <div class="kyluat">
-                    <div class="header-KyLuat d-flex">
-                        <span class="fs-4 p-4">Kỷ luật</span>
-                        <span class="fs-4 p-4">Tạo kỷ luật</span>
-                    </div>
-                    <div class="content-KyLuat width-content-full">
-                        <span class="fs-4 mx-3">Tạo chức vụ</span>
-                        <div class="CSS-Div1 mt-3">
-                            <h5 class="fs-5">Mã chức vụ:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Tên chức vụ:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5>Mô tả</h5>
-                            <textarea name="" id="" style="width: 100%;height: 300px"></textarea>
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Người tạo:</h5>
-                            <input type="text" style="width: 100%">
-                        </div>
-                        <div class="CSS-Div1">
-                            <h5 class="fs-5">Ngày tạo:</h5>
-                            <input type="text" style="width: 100%">
-                            <button class="shadow p-2" style="background-color: green; color: white"><i
-                                    class="fas fa-plus fs-5"></i>
-                                Tạo</button>
-                        </div>
-                        <div class="content-KyLuat p-3 rounded-3 shadow width-content-full">
-                            <span class="fs-4">Danh sách kỷ luật</span>
-                            <div class="header-kyluat mt-3 d-flex">
-                                <div class="header-kyluat1">
-                                    <span class="fs-5">Show</span>
-                                    <select class="px-3">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                    <span class="fs-5">entries</span>
-                                </div>
-                                <div class="header-kyluat2">
-                                    <span class="fs-5 me-1">Search: </span>
-                                    <input type="text">
-                                </div>
+                    <div class="content-KyLuat p-3 rounded-3 shadow width-content-full mt-5">
+                        <span class="fs-4">Danh sách kỷ luật</span>
+                        <div class="header-kyluat mt-3 d-flex">
+                            <div class="header-kyluat1">
+                                <span class="fs-5">Show</span>
+                                <select class="px-3">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                <span class="fs-5">entries</span>
                             </div>
-                            <table class="table mt-3 table-hover table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">STT</th>
-                                        <th scope="col">Mã kỷ luật</th>
-                                        <th scope="col">Lý do</th>
-                                        <th scope="col">Mô tả</th>
-                                        <th scope="col">Người tạo</th>
-                                        <th scope="col">Ngày tạo</th>
-                                        <th scope="col">Sửa</th>
-                                        <th scope="col">Xóa</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>108</td>
-                                        <td>Làm thiếu giờ</td>
-                                        <td></td>
-                                        <td>Nguyễn Văn A</td>
-                                        <td>27/2/2025</td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                    class="fas fa-edit fs-5"></i>
-                                            </button>
-                                        </td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                    class="fas fa-trash fs-5"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>109</td>
-                                        <td>Không hoàn thành tiến độ công việc</td>
-                                        <td></td>
-                                        <td>Nguyễn Văn A</td>
-                                        <td>27/2/2025</td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                    class="fas fa-edit fs-5"></i>
-                                            </button>
-                                        </td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                    class="fas fa-trash fs-5"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>110</td>
-                                        <td>Làm hư đồ đạt trong công ty</td>
-                                        <td></td>
-                                        <td>Nguyễn Văn A</td>
-                                        <td>27/2/2025</td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                    class="fas fa-edit fs-5"></i>
-                                            </button>
-                                        </td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                    class="fas fa-trash fs-5"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>111</td>
-                                        <td>Cải nhau trong giờ làm</td>
-                                        <td></td>
-                                        <td>Nguyễn Văn A</td>
-                                        <td>27/2/2025</td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                    class="fas fa-edit fs-5"></i>
-                                            </button>
-                                        </td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                    class="fas fa-trash fs-5"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td>112</td>
-                                        <td>Làm thiếu giờ</td>
-                                        <td></td>
-                                        <td>Nguyễn Văn A</td>
-                                        <td>27/2/2025</td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: yellow;"><i
-                                                    class="fas fa-edit fs-5"></i>
-                                            </button>
-                                        </td>
-                                        <td><button class="shadow mx-auto p-2" style="background-color: red;"><i
-                                                    class="fas fa-trash fs-5"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="footer-kyluat mt-4 d-flex">
-                                <div class="footer-kyluat1">
-                                    <span class="fs-5">Hiển thị từ 1 đến 5</span>
-                                </div>
-                                <div class="footer-kyluat2">
-                                    <button class="shadow mx-1 button-light">Previous</button>
-                                    <span>1</span>
-                                    <button class="shadow mx-1 button-light">Next</button>
-                                </div>
+                            <div class="header-kyluat2">
+                                <span class="fs-5 me-1">Search: </span>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <table class="table mt-3 table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Mã kỷ luật</th>
+                                    <th scope="col">Lý do</th>
+                                    <th scope="col">Mô tả</th>
+                                    <th scope="col">Người tạo</th>
+                                    <th scope="col">Ngày tạo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>108</td>
+                                    <td>Làm thiếu giờ</td>
+                                    <td></td>
+                                    <td>Nguyễn Văn A</td>
+                                    <td>27/2/2025</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>109</td>
+                                    <td>Không hoàn thành tiến độ công việc</td>
+                                    <td></td>
+                                    <td>Nguyễn Văn A</td>
+                                    <td>27/2/2025</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>110</td>
+                                    <td>Làm hư đồ đạt trong công ty</td>
+                                    <td></td>
+                                    <td>Nguyễn Văn A</td>
+                                    <td>27/2/2025</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>111</td>
+                                    <td>Cải nhau trong giờ làm</td>
+                                    <td></td>
+                                    <td>Nguyễn Văn A</td>
+                                    <td>27/2/2025</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>112</td>
+                                    <td>Làm thiếu giờ</td>
+                                    <td></td>
+                                    <td>Nguyễn Văn A</td>
+                                    <td>27/2/2025</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="footer-kyluat mt-4 d-flex">
+                            <div class="footer-kyluat1">
+                                <span class="fs-5">Hiển thị từ 1 đến 5</span>
+                            </div>
+                            <div class="footer-kyluat2">
+                                <button class="shadow mx-1 button-light">Previous</button>
+                                <span>1</span>
+                                <button class="shadow mx-1 button-light">Next</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 </section>
