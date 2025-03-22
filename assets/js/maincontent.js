@@ -25,13 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
             showSection('danhsachnhanvien');
         });
     }
-    const danhSachTaiKhoanLink = document.querySelector('.Menu-DSTK a');
-    if (danhSachTaiKhoanLink) {
-        danhSachTaiKhoanLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            showSection('danhsachtaikhoan');
-        });
-    }
     const danhSachPhongBanLink = document.querySelector('.Menu-DSPB a');
     if (danhSachPhongBanLink) {
         danhSachPhongBanLink.addEventListener('click', function (e) {
@@ -120,8 +113,46 @@ document.addEventListener("DOMContentLoaded", function () {
     if (tinhluongLink) {
         tinhluongLink.addEventListener('click', function (e) {
             e.preventDefault();
-            showSection('tinhluong ');
+            showSection('tinhluong');
         });
+    }
+    // Xử lý sự kiện click trên các nút tính toán
+    document.getElementById('btnTinhPhuCap')?.addEventListener('click', function () {
+        showTinhLuongSection('tinhphucap');
+        history.pushState({ page: 'tinhphucap' }, '', '#tinhphucap');
+    });
+
+    document.getElementById('btnTinhChamCong')?.addEventListener('click', function () {
+        showTinhLuongSection('tinhchamcong');
+        history.pushState({ page: 'tinhchamcong' }, '', '#tinhchamcong');
+    });
+
+    document.getElementById('btnTinhUngLuong')?.addEventListener('click', function () {
+        showTinhLuongSection('tinhungluong');
+        history.pushState({ page: 'tinhungluong' }, '', '#tinhungluong');
+    });
+
+    document.getElementById('btnTinhTruLuong')?.addEventListener('click', function () {
+        showTinhLuongSection('tinhtruluong');
+        history.pushState({ page: 'tinhtruluong' }, '', '#tinhtruluong');
+    });
+
+    document.getElementById('btnTinhThucLanh')?.addEventListener('click', function () {
+        showTinhLuongSection('tinhthuclanh');
+        history.pushState({ page: 'tinhthuclanh' }, '', '#tinhthuclanh');
+    });
+
+    // Xử lý quay lại lịch sử trình duyệt
+    window.addEventListener('popstate', function (event) {
+        if (event.state && event.state.page) {
+            showTinhLuongSection(event.state.page);
+        } else {
+            showTinhLuongSection('tinhluong'); // Trở lại mặc định nếu không có trạng thái trước đó
+        }
+    });
+    if (!document.querySelector('.tinhluong')) {
+        document.querySelectorAll('.tinhphucap, .tinhchamcong, .tinhungluong, .tinhtruluong, .tinhthuclanh')
+            .forEach(div => div.style.display = 'none');
     }
     const taocongtacLink = document.querySelector('.Menu-TCT a');
     if (taocongtacLink) {
