@@ -1,14 +1,36 @@
 package com.example.demo.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class LoaiCong {
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id; 
     private String maLoaiCong;
     private String tenLoaiCong;
     private float heSoCong;
 
-    public LoaiCong(String maLoaiCong, String tenLoaiCong, float heSoCong) {
+    public LoaiCong(){
+
+    }
+
+    public LoaiCong(float heSoCong, long id, String maLoaiCong, String tenLoaiCong) {
+        this.heSoCong = heSoCong;
+        this.id = id;
         this.maLoaiCong = maLoaiCong;
         this.tenLoaiCong = tenLoaiCong;
-        this.heSoCong = heSoCong;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getMaLoaiCong() {
@@ -27,17 +49,19 @@ public class LoaiCong {
         this.tenLoaiCong = tenLoaiCong;
     }
 
-    public float getHesoCong() {
+    public float getHeSoCong() {
         return heSoCong;
     }
 
-    public void setHesoCong(float hesoCong) {
-        this.heSoCong = hesoCong;
+    public void setHeSoCong(float heSoCong) {
+        this.heSoCong = heSoCong;
     }
 
     @Override
     public String toString() {
-        return "LoaiCong [maLoaiCong=" + maLoaiCong + ", tenLoaiCong=" + tenLoaiCong + ", hesoCong=" + heSoCong + "]";
+        return "LoaiCong [id=" + id + ", maLoaiCong=" + maLoaiCong + ", tenLoaiCong=" + tenLoaiCong + ", heSoCong="
+                + heSoCong + "]";
     }
 
+    
 }

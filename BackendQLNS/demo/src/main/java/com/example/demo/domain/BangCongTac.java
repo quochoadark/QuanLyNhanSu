@@ -2,7 +2,16 @@ package com.example.demo.domain;
 
 import java.sql.Date;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class BangCongTac {
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id; 
     private String maCongTac; 
     private Date ngayBatDau;
     private Date ngayKetThuc; 
@@ -10,8 +19,13 @@ public class BangCongTac {
     private String mucTieu;
     private String nguoiTao;
     private Date ngayTao;
-    public BangCongTac(String maCongTac, Date ngayBatDau, Date ngayKetThuc, String diaDiem, String mucTieu,
+
+    public BangCongTac(){
+        
+    }
+    public BangCongTac(long id, String maCongTac, Date ngayBatDau, Date ngayKetThuc, String diaDiem, String mucTieu,
             String nguoiTao, Date ngayTao) {
+        this.id = id;
         this.maCongTac = maCongTac;
         this.ngayBatDau = ngayBatDau;
         this.ngayKetThuc = ngayKetThuc;
@@ -19,6 +33,12 @@ public class BangCongTac {
         this.mucTieu = mucTieu;
         this.nguoiTao = nguoiTao;
         this.ngayTao = ngayTao;
+    }
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
     }
     public String getMaCongTac() {
         return maCongTac;
@@ -64,10 +84,9 @@ public class BangCongTac {
     }
     @Override
     public String toString() {
-        return "BangCongTac [maCongTac=" + maCongTac + ", ngayBatDau=" + ngayBatDau + ", ngayKetThuc=" + ngayKetThuc
-                + ", diaDiem=" + diaDiem + ", mucTieu=" + mucTieu + ", nguoiTao=" + nguoiTao + ", ngayTao=" + ngayTao
-                + "]";
-    } 
+        return "BangCongTac [id=" + id + ", maCongTac=" + maCongTac + ", ngayBatDau=" + ngayBatDau + ", ngayKetThuc="
+                + ngayKetThuc + ", diaDiem=" + diaDiem + ", mucTieu=" + mucTieu + ", nguoiTao=" + nguoiTao
+                + ", ngayTao=" + ngayTao + "]";
+    }
 
-    
 }

@@ -2,18 +2,35 @@ package com.example.demo.domain;
 
 import java.sql.Date;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class BangCap {
+    @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id; 
     private String maBangCap; 
     private String tenBangCap;
     private String moTa; 
     private String nguoiTao;  
     private Date ngayTao;
-    public BangCap(String maBangCap, String tenBangCap, String moTa, String nguoiTao, Date ngayTao) {
+    public BangCap(long id, String maBangCap, String tenBangCap, String moTa, String nguoiTao, Date ngayTao) {
+        this.id = id;
         this.maBangCap = maBangCap;
         this.tenBangCap = tenBangCap;
         this.moTa = moTa;
         this.nguoiTao = nguoiTao;
         this.ngayTao = ngayTao;
+    }
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
     public String getMaBangCap() {
         return maBangCap;
@@ -45,19 +62,5 @@ public class BangCap {
     public void setNgayTao(Date ngayTao) {
         this.ngayTao = ngayTao;
     } 
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("BangCap{");
-        sb.append("maBangCap=").append(maBangCap);
-        sb.append(", tenBangCap=").append(tenBangCap);
-        sb.append(", moTa=").append(moTa);
-        sb.append(", nguoiTao=").append(nguoiTao);
-        sb.append(", ngayTao=").append(ngayTao);
-        sb.append('}');
-        return sb.toString();
-    }
-    
     
 }

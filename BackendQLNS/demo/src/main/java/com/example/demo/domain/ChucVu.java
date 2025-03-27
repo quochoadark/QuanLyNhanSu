@@ -2,19 +2,42 @@ package com.example.demo.domain;
 
 import java.sql.Date;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class ChucVu {
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id; 
     private String maChucVu;
     private String tenChucVu; 
     private String moTa;
     private String nguoiTao; 
     private Date ngayTao;
-    public ChucVu(String maChucVu, String tenChucVu, String moTa, String nguoiTao, Date ngayTao) {
+    
+    public ChucVu(){
+
+    }
+
+    public ChucVu(long id, String maChucVu, String tenChucVu, String moTa, String nguoiTao, Date ngayTao) {
+        this.id = id;
         this.maChucVu = maChucVu;
         this.tenChucVu = tenChucVu;
         this.moTa = moTa;
         this.nguoiTao = nguoiTao;
         this.ngayTao = ngayTao;
-    } 
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getMaChucVu() {
         return maChucVu;
@@ -58,9 +81,9 @@ public class ChucVu {
 
     @Override
     public String toString() {
-        return "ChucVu [maChucVu=" + maChucVu + ", tenChucVu=" + tenChucVu + ", moTa=" + moTa + ", nguoiTao=" + nguoiTao
-                + ", ngayTao=" + ngayTao + "]";
+        return "ChucVu [id=" + id + ", maChucVu=" + maChucVu + ", tenChucVu=" + tenChucVu + ", moTa=" + moTa
+                + ", nguoiTao=" + nguoiTao + ", ngayTao=" + ngayTao + "]";
     }
-
-   
+    
+    
 }
