@@ -12,13 +12,12 @@ public class NhanVien {
     private long id;
     private String ho;
     private String ten;
-    private int gioiTinh;
+    private boolean  gioiTinh;
     private int dienThoai; 
     private String diaChi;
     private String danToc;
     private String queQuan; 
     private TrinhDo maTrinhDo; 
-    private BoPhan maBoPhan; 
     private ChucVu maChucVu;
     private PhongBan maPhongBan; 
     private BangCap maBangCap;
@@ -29,8 +28,8 @@ public class NhanVien {
 
     }
 
-    public NhanVien(long id, String ho, String ten, int gioiTinh, int dienThoai, String diaChi, String danToc,
-            String queQuan, TrinhDo maTrinhDo, BoPhan maBoPhan, ChucVu maChucVu, PhongBan maPhongBan, BangCap maBangCap,
+    public NhanVien(long id, String ho, String ten, boolean gioiTinh, int dienThoai, String diaChi, String danToc,
+            String queQuan, TrinhDo maTrinhDo, ChucVu maChucVu, PhongBan maPhongBan, BangCap maBangCap,
             ChuyenMon maChuyenMon, String maNhanVien) {
         this.id = id;
         this.ho = ho;
@@ -41,7 +40,6 @@ public class NhanVien {
         this.danToc = danToc;
         this.queQuan = queQuan;
         this.maTrinhDo = maTrinhDo;
-        this.maBoPhan = maBoPhan;
         this.maChucVu = maChucVu;
         this.maPhongBan = maPhongBan;
         this.maBangCap = maBangCap;
@@ -73,11 +71,11 @@ public class NhanVien {
         this.ten = ten;
     }
 
-    public int getGioiTinh() {
+    public boolean getGioiTinh() {
         return gioiTinh;
     }
 
-    public void setGioiTinh(int gioiTinh) {
+    public void setGioiTinh(boolean gioiTinh) {
         this.gioiTinh = gioiTinh;
     }
 
@@ -121,13 +119,6 @@ public class NhanVien {
         this.maTrinhDo = maTrinhDo;
     }
 
-    public BoPhan getMaBoPhan() {
-        return maBoPhan;
-    }
-
-    public void setMaBoPhan(BoPhan maBoPhan) {
-        this.maBoPhan = maBoPhan;
-    }
 
     public ChucVu getMaChucVu() {
         return maChucVu;
@@ -173,7 +164,7 @@ public class NhanVien {
     public String toString() {
         return "NhanVien [id=" + id + ", ho=" + ho + ", ten=" + ten + ", gioiTinh=" + gioiTinh + ", dienThoai="
                 + dienThoai + ", diaChi=" + diaChi + ", danToc=" + danToc + ", queQuan=" + queQuan + ", maTrinhDo="
-                + maTrinhDo + ", maBoPhan=" + maBoPhan + ", maChucVu=" + maChucVu + ", maPhongBan=" + maPhongBan
+                + maTrinhDo + ", maBoPhan="  + ", maChucVu=" + maChucVu + ", maPhongBan=" + maPhongBan
                 + ", maBangCap=" + maBangCap + ", maChuyenMon=" + maChuyenMon + ", maNhanVien=" + maNhanVien + "]";
     }
 

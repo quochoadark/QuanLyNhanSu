@@ -1,6 +1,7 @@
 package com.example.demo.domain;
 
-import java.sql.Date;
+
+import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,7 +18,7 @@ public class PhuCap {
     private float soTien;
     private String hinhThuc; 
     private String trangThai; 
-    private Date ngayPhuCap; 
+    private LocalDate ngayPhuCap; 
     private BangLuong maLuong;
     
     public PhuCap(){
@@ -25,7 +26,7 @@ public class PhuCap {
     }
 
     public PhuCap(long id, String maPhuCap, String tenPhuCap, float soTien, String hinhThuc, String trangThai,
-            Date ngayPhuCap, BangLuong maLuong) {
+            LocalDate ngayPhuCap, BangLuong maLuong) {
         this.id = id;
         this.maPhuCap = maPhuCap;
         this.tenPhuCap = tenPhuCap;
@@ -84,11 +85,11 @@ public class PhuCap {
         this.trangThai = trangThai;
     }
 
-    public Date getNgayPhuCap() {
+    public LocalDate getNgayPhuCap() {
         return ngayPhuCap;
     }
 
-    public void setNgayPhuCap(Date ngayPhuCap) {
+    public void setNgayPhuCap(LocalDate ngayPhuCap) {
         this.ngayPhuCap = ngayPhuCap;
     }
 

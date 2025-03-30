@@ -1,0 +1,760 @@
+/* Thanh NAv */
+.header {
+    height: var(--header-height);
+    background: linear-gradient(270deg, #34495e, #2c3e50);
+    background-size: 400% 400%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+}
+
+.padding-top {
+    padding-top: 60px;
+}
+
+@keyframes gradientFast {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list {
+    list-style: none;
+    /* lam cho mat khoang trang ben trai */
+    padding-left: 0;
+    margin: px 0 0 0;
+    display: flex;
+    padding: 15px;
+}
+
+/* Tach cac chu ra*/
+.header__navbar-item {
+    margin: 0 8px;
+    position: relative;
+    min-height: 26px;
+}
+
+/* lam cho may cai li thanh hang ngang */
+.header__navbar-item,
+.header__navbar-item-link {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: var(--white-color);
+    /* Bo cai gach chan */
+    text-decoration: none;
+    /* Thiet lap chu đậm hay nhạt */
+    font-weight: 300;
+}
+
+/* làm cho chữ mờ đi */
+.header__navbar-item:hover,
+.header__navbar-item-link:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header__navbar-icon-link {
+    color: var(--white-color);
+    text-decoration: none;
+    margin-top: 3px;
+}
+
+/* CSS cho các icon kích cỡ chữ và căn giữa  */
+.header__navbar-icon {
+    font-size: 1.8rem;
+    margin: 0 5px;
+}
+
+/* CSS cho các icon đứng cùng hầng với chữ */
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-item-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* CSS cho 2 icon bên trái  */
+
+.CSS-icon-open-list {
+    margin-left: 75px;
+    font-size: 25px;
+}
+
+.CSS-icon-QLNS {
+    margin-left: 40px;
+    font-size: 25px;
+}
+
+/* CSS cho bên phải */
+.CSS-icon-HopThu {
+    margin-top: 2px;
+}
+
+.CSS-text-left-nav {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/* CSS cho mail */
+.header__mail {
+    position: absolute;
+    top: 118%;
+    right: 0;
+    width: 404px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background-color: var(--white-color);
+    cursor: default;
+    transform-origin: calc(100% - 32px) top;
+    animation: headerNotifyGrowth ease-in 0.2s;
+    display: none;
+    will-change: opacity, transform;
+    z-index: 1;
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__mail-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header__mail-header h3 {
+    color: black;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 40px;
+    margin: 0 0 0 12px;
+}
+
+.header__mail-list {
+    padding-left: 0;
+}
+
+.header__mail-item {
+    display: flex;
+}
+
+.header__mail-item:hover {
+    background-color: #CCCCCC;
+}
+
+.header__mail-item--viewed {
+    background-color: #fff;
+}
+
+.header__mail-link {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.header__mail-img {
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__mail-info {
+    margin-left: 12px;
+}
+
+.header__mail-name {
+    display: block;
+    font-size: 14px;
+    color: black;
+    font-weight: 400;
+    line-height: 2.0rem;
+}
+
+.header__mail-description {
+    display: block;
+    font-size: 12px;
+    color: black;
+    margin-top: 2px;
+}
+
+
+.header__mail-footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.header__mail-footer-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 20px;
+    font-weight: 500;
+}
+
+.header__navbar-item--has-mail:hover .header__mail {
+    display: block;
+}
+
+.header__mail::before {
+    content: "";
+    border-width: 20px 27px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 4px;
+    top: -29px;
+}
+
+.header__mail::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -16px;
+    width: 90px;
+    height: 20px;
+}
+
+
+
+/* CSS cho thông báo */
+.header__notify {
+    position: absolute;
+    top: 118%;
+    right: 0;
+    width: 404px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background-color: var(--white-color);
+    cursor: default;
+    transform-origin: calc(100% - 32px) top;
+    animation: headerNotifyGrowth ease-in 0.2s;
+    display: none;
+    will-change: opacity, transform;
+    z-index: 1;
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header__notify-header h3 {
+    color: black;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    margin: 0 0 0 12px;
+}
+
+.header__notify-list {
+    padding-left: 0;
+}
+
+.header__notify-item {
+    display: flex;
+}
+
+.header__notify-item:hover {
+    background-color: #CCCCCC;
+}
+
+.header__notify-item--viewed {
+    background-color: #fff;
+}
+
+.header__notify-link {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.header__notify-img {
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__notify-info {
+    margin-left: 12px;
+}
+
+.header__notify-name {
+    display: block;
+    font-size: 14px;
+    color: black;
+    font-weight: 400;
+    line-height: 2.0rem;
+}
+
+.header__notify-description {
+    display: block;
+    font-size: 12px;
+    color: black;
+    margin-top: 2px;
+}
+
+
+.header__notify-footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.header__notify-footer-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 20px;
+    font-weight: 500;
+}
+
+.header__navbar-item--has-notify:hover .header__notify {
+    display: block;
+}
+
+.header__notify::before {
+    content: "";
+    border-width: 20px 27px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 4px;
+    top: -29px;
+}
+
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -16px;
+    width: 90px;
+    height: 20px;
+}
+
+/* CSS cho thong tin nguoi dung */
+.header__navbar-user {
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: none;
+}
+
+.header__navbar-user-img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.header__navbar-user-name {
+    margin-left: 4px;
+    font-size: 1.4rem;
+    font-weight: 400
+}
+
+.header__navbar-user-menu {
+    position: absolute;
+    padding-left: 0;
+    top: calc(100% + 6px);
+    right: 0;
+    border-radius: 2px;
+    width: 160px;
+    background-color: var(--white-color);
+    list-style: none;
+    z-index: 1;
+    box-shadow: 0 1px 2px #e0e0e0;
+    display: none;
+}
+
+.header__navbar-user-item {
+    margin-top: 8px;
+    font-weight: 400;
+}
+
+.header__navbar-user-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 16px;
+    display: block;
+    font-size: 1.4rem;
+}
+
+.header__navbar-user-item a:hover {
+    background-color: #CCCCCC;
+}
+
+.header__navbar-user-item a:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.header__navbar-user-item a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.header__navbar-user-menu::before {
+    content: "";
+    border-width: 15px 20px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 7px;
+    top: -25px;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu {
+    display: block;
+}
+
+.header__navbar-user-item--separate {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* CSS cho Đăng ký */
+.auth-form__container {
+    margin-top: 35px;
+    padding: 0 32px;
+}
+
+/* CSS cho bên trong */
+.auth-form {
+    width: 500px;
+    /* CSS bên này cũng được hoặc bên trang modal */
+    border-radius: 5px;
+    background-color: var(--white-color);
+    /* Làm cho khoảng modal ở dưới có border-radius */
+    overflow: hidden;
+    /* display: none; */
+}
+
+.auth-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.auth-form__switch-btn {
+    font-size: 1.6rem;
+    color: red;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.auth-form__input {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+    outline: none;
+}
+
+/* Khi bấm vào nhập sẽ đổi màu border */
+.auth-form__input:focus {
+    border-color: #888;
+}
+
+.auth-form__aside {
+    margin-top: 18px;
+}
+
+.auth_form__policy-text {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    font-weight: 500;
+    /* padding placholder */
+    padding: 0 12px;
+}
+
+.auth_form__text-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.auth-form__controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.auth-form__controls-back {
+    margin-right: 8px;
+}
+
+.auth-form__socials {
+    background-color: #f5f5f5;
+    padding: 16px 36px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.btn.btn-size-s {
+    height: 32px;
+    font-size: 12px;
+}
+
+.auth-form__socials-icon {
+    font-size: 1.8rem;
+}
+
+.auth-form__socials--facebook {
+    background-color: #3a5a98;
+    color: var(--white-color);
+}
+
+.auth-form__socials--facebook.auth-form__socials-icon {
+    color: var(--white-color);
+}
+
+.auth-form__socials-title {
+    padding: 0 24px;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.auth-form__socials--google {
+    color: #666;
+    background-color: var(--white-color);
+}
+
+.auth-form__help {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__help-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #939393;
+}
+
+.auth-form__help-separate {
+    display: block;
+    height: 22px;
+    margin: 1px 16px 0;
+    border-left: 1px solid #eaeaea;
+}
+
+.auth-form__help-link-forgot {
+    color: var(--primary-color);
+}
+
+/* CSS sidebar */
+.col-2 {
+    background: linear-gradient(270deg, #1e3c72, #2a5298);
+    background-size: 400% 400%;
+    animation: gradientFlow 5s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+:root {
+    --base-clr: #11121a;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr: #e6e6ef;
+    --accent-clr: #5e63ff;
+    --secondary-text-clr: #b0b3c1;
+}
+
+.active {
+    margin-right: 50px;
+    padding: 0;
+    list-style: 1.5rem;
+
+}
+
+#sidebar {
+    padding: 5px 1em;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 60px);
+    /* Cuộn sidebar */
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* Khi cuộn hết không lan ra ngoài */
+    overscroll-behavior: contain;
+}
+
+.col-10 {
+    margin-left: 250px;
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar a,
+#sidebar .dropdown-btn,
+#sidebar {
+    border-radius: .5em;
+    padding: .85em;
+    text-decoration: none;
+    color: var(--text-clr);
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.1em;
+}
+
+.dropdown-btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+#sidebar i {
+    flex-shrink: 0;
+    fill: var(--text-clr);
+}
+
+#sidebar a span,
+#sidebar .dropdown-btn span {
+    flex-grow: 1;
+}
+
+#sidebar a,
+#sidebar .dropdown-btn,
+#sidebar .sub-menu li a {
+    font-weight: 500;
+}
+
+#sidebar a:hover,
+#sidebar .dropdown-btn:hover {
+    background-color: var(--hover-clr);
+}
+
+#sidebar .sub-menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 300ms ease-in-out;
+
+    >div {
+        overflow: hidden;
+    }
+
+}
+
+#sidebar .sub-menu.show {
+    grid-template-rows: 1fr;
+}
+
+.rotate i:last-child {
+    rotate: 180deg;
+}
+
+#sidebar .sub-menu a {
+    padding-left: 2em;
+}
+
+#toggle-btn {
+    margin-left: 20px;
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    background: none;
+    cursor: pointer;
+
+    i {
+        transition: rotate 150ms ease;
+    }
+}
+
+#sidebar .sub-menu a:hover {
+    background-color: var(--accent-clr);
+    color: white;
+}
+
+.tong-quan {
+    margin-left: 2px;
+}
+
+.quan-ly-ho-so {
+    margin-left: 4px;
+}
+
+.quan-ly-cong-tac {
+    margin-left: 3px;
+}
+
+/* Hover */
+.active-item {
+    background-color: #5e63ff !important;
+}
+
+/* Màu khi hover vào một mục không phải active */
+.hover-effect {
+    background-color: green !important;
+}

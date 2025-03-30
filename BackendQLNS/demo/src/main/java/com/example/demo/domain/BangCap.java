@@ -1,6 +1,5 @@
 package com.example.demo.domain;
-
-import java.sql.Date;
+import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,8 +15,8 @@ public class BangCap {
     private String tenBangCap;
     private String moTa; 
     private String nguoiTao;  
-    private Date ngayTao;
-    public BangCap(long id, String maBangCap, String tenBangCap, String moTa, String nguoiTao, Date ngayTao) {
+    private LocalDate ngayTao;
+    public BangCap(long id, String maBangCap, String tenBangCap, String moTa, String nguoiTao, LocalDate ngayTao) {
         this.id = id;
         this.maBangCap = maBangCap;
         this.tenBangCap = tenBangCap;
@@ -56,10 +55,10 @@ public class BangCap {
     public void setNguoiTao(String nguoiTao) {
         this.nguoiTao = nguoiTao;
     }
-    public Date getNgayTao() {
+    public LocalDate getNgayTao() {
         return ngayTao;
     }
-    public void setNgayTao(Date ngayTao) {
+    public void setNgayTao(LocalDate ngayTao) {
         this.ngayTao = ngayTao;
     } 
     

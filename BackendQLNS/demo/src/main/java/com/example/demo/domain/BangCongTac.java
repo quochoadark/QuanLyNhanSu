@@ -1,6 +1,6 @@
 package com.example.demo.domain;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,18 +13,18 @@ public class BangCongTac {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id; 
     private String maCongTac; 
-    private Date ngayBatDau;
-    private Date ngayKetThuc; 
+    private LocalDate ngayBatDau;
+    private LocalDate ngayKetThuc; 
     private String diaDiem; 
     private String mucTieu;
     private String nguoiTao;
-    private Date ngayTao;
+    private LocalDate ngayTao;
 
     public BangCongTac(){
         
     }
-    public BangCongTac(long id, String maCongTac, Date ngayBatDau, Date ngayKetThuc, String diaDiem, String mucTieu,
-            String nguoiTao, Date ngayTao) {
+    public BangCongTac(long id, String maCongTac, LocalDate ngayBatDau, LocalDate ngayKetThuc, String diaDiem, String mucTieu,
+            String nguoiTao, LocalDate ngayTao) {
         this.id = id;
         this.maCongTac = maCongTac;
         this.ngayBatDau = ngayBatDau;
@@ -46,16 +46,16 @@ public class BangCongTac {
     public void setMaCongTac(String maCongTac) {
         this.maCongTac = maCongTac;
     }
-    public Date getNgayBatDau() {
+    public LocalDate getNgayBatDau() {
         return ngayBatDau;
     }
-    public void setNgayBatDau(Date ngayBatDau) {
+    public void setNgayBatDau(LocalDate ngayBatDau) {
         this.ngayBatDau = ngayBatDau;
     }
-    public Date getNgayKetThuc() {
+    public LocalDate getNgayKetThuc() {
         return ngayKetThuc;
     }
-    public void setNgayKetThuc(Date ngayKetThuc) {
+    public void setNgayKetThuc(LocalDate ngayKetThuc) {
         this.ngayKetThuc = ngayKetThuc;
     }
     public String getDiaDiem() {
@@ -76,10 +76,10 @@ public class BangCongTac {
     public void setNguoiTao(String nguoiTao) {
         this.nguoiTao = nguoiTao;
     }
-    public Date getNgayTao() {
+    public LocalDate getNgayTao() {
         return ngayTao;
     }
-    public void setNgayTao(Date ngayTao) {
+    public void setNgayTao(LocalDate ngayTao) {
         this.ngayTao = ngayTao;
     }
     @Override
