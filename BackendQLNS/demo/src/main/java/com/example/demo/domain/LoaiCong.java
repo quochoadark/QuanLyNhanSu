@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class LoaiCong {
@@ -12,17 +14,21 @@ public class LoaiCong {
     private long id; 
     private String maLoaiCong;
     private String tenLoaiCong;
-    private float heSoCong;
+    private double heSoCong;
+
+        @ManyToOne
+    @JoinColumn(name = "maChamCong_id")
+    private ChamCong maChamCong;
 
     public LoaiCong(){
 
     }
 
-    public LoaiCong(float heSoCong, long id, String maLoaiCong, String tenLoaiCong) {
-        this.heSoCong = heSoCong;
+    public LoaiCong(long id, String maLoaiCong, String tenLoaiCong, double heSoCong) {
         this.id = id;
         this.maLoaiCong = maLoaiCong;
         this.tenLoaiCong = tenLoaiCong;
+        this.heSoCong = heSoCong;
     }
 
     public long getId() {
@@ -49,12 +55,20 @@ public class LoaiCong {
         this.tenLoaiCong = tenLoaiCong;
     }
 
-    public float getHeSoCong() {
+    public double getHeSoCong() {
         return heSoCong;
     }
 
-    public void setHeSoCong(float heSoCong) {
+    public void setHeSoCong(double heSoCong) {
         this.heSoCong = heSoCong;
+    }
+
+    public ChamCong getMaChamCong() {
+        return maChamCong;
+    }
+
+    public void setMaChamCong(ChamCong maChamCong) {
+        this.maChamCong = maChamCong;
     }
 
     @Override
@@ -62,6 +76,6 @@ public class LoaiCong {
         return "LoaiCong [id=" + id + ", maLoaiCong=" + maLoaiCong + ", tenLoaiCong=" + tenLoaiCong + ", heSoCong="
                 + heSoCong + "]";
     }
-
+    
     
 }

@@ -1,11 +1,13 @@
 package com.example.demo.domain;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 @Entity
 public class ChuyenMon {
         @Id
@@ -16,12 +18,15 @@ public class ChuyenMon {
     private String moTa;
     private String nguoiTao;
     private LocalDate ngayTao;
+     @OneToMany(mappedBy = "maChuyenMon")
+    List<NhanVien> maNhanVienCM; 
     
     public ChuyenMon(){
 
     }
 
-    public ChuyenMon(long id, String maChuyenMon, String tenChuyenMon, String moTa, String nguoiTao, LocalDate ngayTao) {
+    public ChuyenMon(long id, String maChuyenMon, String tenChuyenMon, String moTa, String nguoiTao,
+            LocalDate ngayTao) {
         this.id = id;
         this.maChuyenMon = maChuyenMon;
         this.tenChuyenMon = tenChuyenMon;
@@ -78,11 +83,19 @@ public class ChuyenMon {
         this.ngayTao = ngayTao;
     }
 
+    public List<NhanVien> getMaNhanVienCM() {
+        return maNhanVienCM;
+    }
+
+    public void setMaNhanVienCM(List<NhanVien> maNhanVienCM) {
+        this.maNhanVienCM = maNhanVienCM;
+    }
+
     @Override
     public String toString() {
         return "ChuyenMon [id=" + id + ", maChuyenMon=" + maChuyenMon + ", tenChuyenMon=" + tenChuyenMon + ", moTa="
                 + moTa + ", nguoiTao=" + nguoiTao + ", ngayTao=" + ngayTao + "]";
     }
-    
-    
+
+       
 }

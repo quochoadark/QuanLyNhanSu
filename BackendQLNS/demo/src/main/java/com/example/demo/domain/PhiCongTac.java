@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class PhiCongTac {
@@ -12,19 +14,21 @@ public class PhiCongTac {
     private long id; 
     private String maPhiCongTac;
     private String loaiPhi; 
-    private float soTien; 
+    private double soTien; 
+
+       @ManyToOne
+    @JoinColumn(name = "maCongTac_id")
     private BangCongTac maCongTac;
 
     public PhiCongTac(){
 
     }
 
-    public PhiCongTac(long id, String maPhiCongTac, String loaiPhi, float soTien, BangCongTac maCongTac) {
+    public PhiCongTac(long id, String maPhiCongTac, String loaiPhi, double soTien) {
         this.id = id;
         this.maPhiCongTac = maPhiCongTac;
         this.loaiPhi = loaiPhi;
         this.soTien = soTien;
-        this.maCongTac = maCongTac;
     }
 
     public long getId() {
@@ -51,11 +55,11 @@ public class PhiCongTac {
         this.loaiPhi = loaiPhi;
     }
 
-    public float getSoTien() {
+    public double getSoTien() {
         return soTien;
     }
 
-    public void setSoTien(float soTien) {
+    public void setSoTien(double soTien) {
         this.soTien = soTien;
     }
 
@@ -70,8 +74,8 @@ public class PhiCongTac {
     @Override
     public String toString() {
         return "PhiCongTac [id=" + id + ", maPhiCongTac=" + maPhiCongTac + ", loaiPhi=" + loaiPhi + ", soTien=" + soTien
-                + ", maCongTac=" + maCongTac + "]";
+                + "]";
     }
-    
+
     
 }

@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class TruLuong {
@@ -14,21 +16,22 @@ public class TruLuong {
     private long id;
     private String maTruLuong; 
     private LocalDate ngayTruLuong; 
-    private float soTien; 
+    private double soTien; 
     private String trangThai; 
+       @ManyToOne
+    @JoinColumn(name = "maLuong_id")
     private BangLuong maLuong;
     
     public TruLuong(){
 
     }
 
-    public TruLuong(long id, String maTruLuong, LocalDate ngayTruLuong, float soTien, String trangThai, BangLuong maLuong) {
+    public TruLuong(long id, String maTruLuong, LocalDate ngayTruLuong, double soTien, String trangThai) {
         this.id = id;
         this.maTruLuong = maTruLuong;
         this.ngayTruLuong = ngayTruLuong;
         this.soTien = soTien;
         this.trangThai = trangThai;
-        this.maLuong = maLuong;
     }
 
     public long getId() {
@@ -55,11 +58,11 @@ public class TruLuong {
         this.ngayTruLuong = ngayTruLuong;
     }
 
-    public float getSoTien() {
+    public double getSoTien() {
         return soTien;
     }
 
-    public void setSoTien(float soTien) {
+    public void setSoTien(double soTien) {
         this.soTien = soTien;
     }
 
@@ -82,8 +85,8 @@ public class TruLuong {
     @Override
     public String toString() {
         return "TruLuong [id=" + id + ", maTruLuong=" + maTruLuong + ", ngayTruLuong=" + ngayTruLuong + ", soTien="
-                + soTien + ", trangThai=" + trangThai + ", maLuong=" + maLuong + "]";
+                + soTien + ", trangThai=" + trangThai + "]";
     }
-    
+
     
 }

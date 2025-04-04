@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class PhuCap {
@@ -15,18 +17,21 @@ public class PhuCap {
     private long id; 
     private String maPhuCap;
     private String tenPhuCap; 
-    private float soTien;
+    private double soTien;
     private String hinhThuc; 
     private String trangThai; 
     private LocalDate ngayPhuCap; 
+    
+     @ManyToOne
+    @JoinColumn(name = "maLuong_id")
     private BangLuong maLuong;
     
     public PhuCap(){
 
     }
 
-    public PhuCap(long id, String maPhuCap, String tenPhuCap, float soTien, String hinhThuc, String trangThai,
-            LocalDate ngayPhuCap, BangLuong maLuong) {
+    public PhuCap(long id, String maPhuCap, String tenPhuCap, double soTien, String hinhThuc, String trangThai,
+            LocalDate ngayPhuCap) {
         this.id = id;
         this.maPhuCap = maPhuCap;
         this.tenPhuCap = tenPhuCap;
@@ -34,7 +39,6 @@ public class PhuCap {
         this.hinhThuc = hinhThuc;
         this.trangThai = trangThai;
         this.ngayPhuCap = ngayPhuCap;
-        this.maLuong = maLuong;
     }
 
     public long getId() {
@@ -61,11 +65,11 @@ public class PhuCap {
         this.tenPhuCap = tenPhuCap;
     }
 
-    public float getSoTien() {
+    public double getSoTien() {
         return soTien;
     }
 
-    public void setSoTien(float soTien) {
+    public void setSoTien(double soTien) {
         this.soTien = soTien;
     }
 
@@ -104,9 +108,8 @@ public class PhuCap {
     @Override
     public String toString() {
         return "PhuCap [id=" + id + ", maPhuCap=" + maPhuCap + ", tenPhuCap=" + tenPhuCap + ", soTien=" + soTien
-                + ", hinhThuc=" + hinhThuc + ", trangThai=" + trangThai + ", ngayPhuCap=" + ngayPhuCap + ", maLuong="
-                + maLuong + "]";
+                + ", hinhThuc=" + hinhThuc + ", trangThai=" + trangThai + ", ngayPhuCap=" + ngayPhuCap + "]";
     }
-    
+
     
 }

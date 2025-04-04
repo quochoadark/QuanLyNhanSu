@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class KyLuat {
@@ -15,19 +17,20 @@ public class KyLuat {
     private int maKyLuat;
     private LocalDate ngayKhenThuong;
     private int loai;
+        @ManyToOne
+    @JoinColumn(name = "maNhanVien_id")
     private NhanVien maNhanVien;
-    private float soTien;
+    private double soTien;
     
     public KyLuat(){
 
     }
 
-    public KyLuat(long id, int maKyLuat, LocalDate ngayKhenThuong, int loai, NhanVien maNhanVien, float soTien) {
+    public KyLuat(long id, int maKyLuat, LocalDate ngayKhenThuong, int loai, double soTien) {
         this.id = id;
         this.maKyLuat = maKyLuat;
         this.ngayKhenThuong = ngayKhenThuong;
         this.loai = loai;
-        this.maNhanVien = maNhanVien;
         this.soTien = soTien;
     }
 
@@ -71,19 +74,19 @@ public class KyLuat {
         this.maNhanVien = maNhanVien;
     }
 
-    public float getSoTien() {
+    public double getSoTien() {
         return soTien;
     }
 
-    public void setSoTien(float soTien) {
+    public void setSoTien(double soTien) {
         this.soTien = soTien;
     }
 
     @Override
     public String toString() {
         return "KyLuat [id=" + id + ", maKyLuat=" + maKyLuat + ", ngayKhenThuong=" + ngayKhenThuong + ", loai=" + loai
-                + ", maNhanVien=" + maNhanVien + ", soTien=" + soTien + "]";
+                + ", soTien=" + soTien + "]";
     }
-    
+
     
 }

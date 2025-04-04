@@ -1,11 +1,13 @@
 package com.example.demo.domain;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 @Entity
 public class PhongBan {
         @Id
@@ -16,6 +18,8 @@ public class PhongBan {
     private String moTa;
     private String ngươiTao; 
     private LocalDate ngayTao;
+     @OneToMany(mappedBy = "maPhongBan")
+    List<NhanVien> maNhanVienPB; 
     
     public PhongBan(){
 
@@ -78,11 +82,19 @@ public class PhongBan {
         this.ngayTao = ngayTao;
     }
 
+    public List<NhanVien> getMaNhanVienPB() {
+        return maNhanVienPB;
+    }
+
+    public void setMaNhanVienPB(List<NhanVien> maNhanVienPB) {
+        this.maNhanVienPB = maNhanVienPB;
+    }
+
     @Override
     public String toString() {
         return "PhongBan [id=" + id + ", maPhongBan=" + maPhongBan + ", tenPhongBan=" + tenPhongBan + ", moTa=" + moTa
                 + ", ngươiTao=" + ngươiTao + ", ngayTao=" + ngayTao + "]";
     }
-    
+
     
 }

@@ -1,11 +1,15 @@
 package com.example.demo.domain;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class ChamCong {
@@ -13,20 +17,26 @@ public class ChamCong {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id; 
     private String maChamCong; 
-    private LocalDate ngayCong; 
-    private LoaiCong maLoaiCong; 
-    private BangLuong maLuong;
+    private LocalDate ngayCong;  
     
+        @ManyToOne
+    @JoinColumn(name = "maNhanVien_id")
+    private NhanVien maNhanVien;
+
+       @OneToMany(mappedBy = "maChamCong")
+    List<LoaiCong> maLoaiCongCC;
+
+    @OneToMany(mappedBy = "maChamCong")
+    List<TangCa> maTangCaCC;
+
     public ChamCong(){
 
     }
 
-    public ChamCong(long id, String maChamCong, LocalDate ngayCong, LoaiCong maLoaiCong, BangLuong maLuong) {
+    public ChamCong(long id, String maChamCong, LocalDate ngayCong) {
         this.id = id;
         this.maChamCong = maChamCong;
         this.ngayCong = ngayCong;
-        this.maLoaiCong = maLoaiCong;
-        this.maLuong = maLuong;
     }
 
     public long getId() {
@@ -53,27 +63,34 @@ public class ChamCong {
         this.ngayCong = ngayCong;
     }
 
-    public LoaiCong getMaLoaiCong() {
-        return maLoaiCong;
+    public NhanVien getMaNhanVien() {
+        return maNhanVien;
     }
 
-    public void setMaLoaiCong(LoaiCong maLoaiCong) {
-        this.maLoaiCong = maLoaiCong;
+    public void setMaNhanVien(NhanVien maNhanVien) {
+        this.maNhanVien = maNhanVien;
     }
 
-    public BangLuong getMaLuong() {
-        return maLuong;
+    public List<LoaiCong> getMaLoaiCongCC() {
+        return maLoaiCongCC;
     }
 
-    public void setMaLuong(BangLuong maLuong) {
-        this.maLuong = maLuong;
+    public void setMaLoaiCongCC(List<LoaiCong> maLoaiCongCC) {
+        this.maLoaiCongCC = maLoaiCongCC;
+    }
+
+    public List<TangCa> getMaTangCaCC() {
+        return maTangCaCC;
+    }
+
+    public void setMaTangCaCC(List<TangCa> maTangCaCC) {
+        this.maTangCaCC = maTangCaCC;
     }
 
     @Override
     public String toString() {
-        return "ChamCong [id=" + id + ", maChamCong=" + maChamCong + ", ngayCong=" + ngayCong + ", maLoaiCong="
-                + maLoaiCong + ", maLuong=" + maLuong + "]";
+        return "ChamCong [id=" + id + ", maChamCong=" + maChamCong + ", ngayCong=" + ngayCong + "]";
     }
-    
+
     
 }

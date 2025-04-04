@@ -1,10 +1,12 @@
 package com.example.demo.domain;
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class BangCap {
@@ -16,6 +18,11 @@ public class BangCap {
     private String moTa; 
     private String nguoiTao;  
     private LocalDate ngayTao;
+     @OneToMany(mappedBy = "maBangCap")
+    List<NhanVien> maNhanVienBC;
+    public BangCap(){
+
+    }
     public BangCap(long id, String maBangCap, String tenBangCap, String moTa, String nguoiTao, LocalDate ngayTao) {
         this.id = id;
         this.maBangCap = maBangCap;
@@ -27,7 +34,6 @@ public class BangCap {
     public long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
@@ -60,6 +66,17 @@ public class BangCap {
     }
     public void setNgayTao(LocalDate ngayTao) {
         this.ngayTao = ngayTao;
-    } 
+    }
+    public List<NhanVien> getMaNhanVienBC() {
+        return maNhanVienBC;
+    }
+    public void setMaNhanVienBC(List<NhanVien> maNhanVienBC) {
+        this.maNhanVienBC = maNhanVienBC;
+    }
+    @Override
+    public String toString() {
+        return "BangCap [id=" + id + ", maBangCap=" + maBangCap + ", tenBangCap=" + tenBangCap + ", moTa=" + moTa
+                + ", nguoiTao=" + nguoiTao + ", ngayTao=" + ngayTao + "]";
+    }
     
 }

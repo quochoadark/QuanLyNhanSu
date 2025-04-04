@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class TangCa {
@@ -15,20 +17,21 @@ public class TangCa {
     private String maTangCa; 
     private LocalDate ngayTangCa;
     private int soGioTangCa; 
-    private float heSoTangCa; 
-    private BangLuong maLuong; 
+    private double heSoTangCa; 
+     @ManyToOne
+    @JoinColumn(name = "maChamCong_id")
+    private ChamCong maChamCong;
 
     public TangCa(){
 
     }
 
-    public TangCa(long id, String maTangCa, LocalDate ngayTangCa, int soGioTangCa, float heSoTangCa, BangLuong maLuong) {
+    public TangCa(long id, String maTangCa, LocalDate ngayTangCa, int soGioTangCa, double heSoTangCa) {
         this.id = id;
         this.maTangCa = maTangCa;
         this.ngayTangCa = ngayTangCa;
         this.soGioTangCa = soGioTangCa;
         this.heSoTangCa = heSoTangCa;
-        this.maLuong = maLuong;
     }
 
     public long getId() {
@@ -63,27 +66,27 @@ public class TangCa {
         this.soGioTangCa = soGioTangCa;
     }
 
-    public float getHeSoTangCa() {
+    public double getHeSoTangCa() {
         return heSoTangCa;
     }
 
-    public void setHeSoTangCa(float heSoTangCa) {
+    public void setHeSoTangCa(double heSoTangCa) {
         this.heSoTangCa = heSoTangCa;
     }
 
-    public BangLuong getMaLuong() {
-        return maLuong;
+    public ChamCong getMaChamCong() {
+        return maChamCong;
     }
 
-    public void setMaLuong(BangLuong maLuong) {
-        this.maLuong = maLuong;
+    public void setMaChamCong(ChamCong maChamCong) {
+        this.maChamCong = maChamCong;
     }
 
     @Override
     public String toString() {
         return "TangCa [id=" + id + ", maTangCa=" + maTangCa + ", ngayTangCa=" + ngayTangCa + ", soGioTangCa="
-                + soGioTangCa + ", heSoTangCa=" + heSoTangCa + ", maLuong=" + maLuong + "]";
+                + soGioTangCa + ", heSoTangCa=" + heSoTangCa + "]";
     }
-
+    
     
 }

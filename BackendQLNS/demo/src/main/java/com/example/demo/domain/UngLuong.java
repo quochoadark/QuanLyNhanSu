@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class UngLuong {
@@ -13,25 +15,27 @@ public class UngLuong {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id; 
     private String maUngLuong; 
-    private float soTien; 
+    private double soTien; 
     private LocalDate ngayUngLuong; 
     private String trangThai;
     private String hinhThuc; 
+
+       @ManyToOne
+    @JoinColumn(name = "maLuong_id")
     private BangLuong maLuong;
 
     public UngLuong(){
 
     }
 
-    public UngLuong(long id, String maUngLuong, float soTien, LocalDate ngayUngLuong, String trangThai, String hinhThuc,
-            BangLuong maLuong) {
+    public UngLuong(long id, String maUngLuong, double soTien, LocalDate ngayUngLuong, String trangThai,
+            String hinhThuc) {
         this.id = id;
         this.maUngLuong = maUngLuong;
         this.soTien = soTien;
         this.ngayUngLuong = ngayUngLuong;
         this.trangThai = trangThai;
         this.hinhThuc = hinhThuc;
-        this.maLuong = maLuong;
     }
 
     public long getId() {
@@ -50,11 +54,11 @@ public class UngLuong {
         this.maUngLuong = maUngLuong;
     }
 
-    public float getSoTien() {
+    public double getSoTien() {
         return soTien;
     }
 
-    public void setSoTien(float soTien) {
+    public void setSoTien(double soTien) {
         this.soTien = soTien;
     }
 
@@ -93,8 +97,8 @@ public class UngLuong {
     @Override
     public String toString() {
         return "UngLuong [id=" + id + ", maUngLuong=" + maUngLuong + ", soTien=" + soTien + ", ngayUngLuong="
-                + ngayUngLuong + ", trangThai=" + trangThai + ", hinhThuc=" + hinhThuc + ", maLuong=" + maLuong + "]";
+                + ngayUngLuong + ", trangThai=" + trangThai + ", hinhThuc=" + hinhThuc + "]";
     }
-    
+
     
 }

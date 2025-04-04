@@ -1,11 +1,13 @@
 package com.example.demo.domain;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class ChucVu {
@@ -17,18 +19,21 @@ public class ChucVu {
     private String moTa;
     private String nguoiTao; 
     private LocalDate ngayTao;
+
+    @OneToMany (mappedBy="maChucVu")
+    List<NhanVien> maNhanVienCV;
     
     public ChucVu(){
 
     }
 
-    public ChucVu(long id, String maChucVu, String tenChucVu, String moTa, String nguoiTao, LocalDate ngayTao) {
+    public ChucVu(long id, String maChucVu, String moTa, LocalDate ngayTao, String nguoiTao, String tenChucVu) {
         this.id = id;
         this.maChucVu = maChucVu;
-        this.tenChucVu = tenChucVu;
         this.moTa = moTa;
-        this.nguoiTao = nguoiTao;
         this.ngayTao = ngayTao;
+        this.nguoiTao = nguoiTao;
+        this.tenChucVu = tenChucVu;
     }
 
     public long getId() {
@@ -79,11 +84,19 @@ public class ChucVu {
         this.ngayTao = ngayTao;
     }
 
+    public List<NhanVien> getMaNhanVienCV() {
+        return maNhanVienCV;
+    }
+
+    public void setMaNhanVienCV(List<NhanVien> maNhanVienCV) {
+        this.maNhanVienCV = maNhanVienCV;
+    }
+
     @Override
     public String toString() {
         return "ChucVu [id=" + id + ", maChucVu=" + maChucVu + ", tenChucVu=" + tenChucVu + ", moTa=" + moTa
                 + ", nguoiTao=" + nguoiTao + ", ngayTao=" + ngayTao + "]";
     }
-    
+
     
 }

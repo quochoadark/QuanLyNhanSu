@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class KhenThuong {
@@ -15,19 +17,21 @@ public class KhenThuong {
     private int maKhenThuong;
     private LocalDate ngayKhenThuong;
     private int loai;
+    private double soTien;
+
+     @ManyToOne
+    @JoinColumn(name = "maNhanVien_id")
     private NhanVien maNhanVien;
-    private float soTien;
     
     public KhenThuong(){
 
     }
 
-    public KhenThuong(long id, int maKhenThuong, LocalDate ngayKhenThuong, int loai, NhanVien maNhanVien, float soTien) {
+    public KhenThuong(long id, int maKhenThuong, LocalDate ngayKhenThuong, int loai, double soTien) {
         this.id = id;
         this.maKhenThuong = maKhenThuong;
         this.ngayKhenThuong = ngayKhenThuong;
         this.loai = loai;
-        this.maNhanVien = maNhanVien;
         this.soTien = soTien;
     }
 
@@ -63,6 +67,14 @@ public class KhenThuong {
         this.loai = loai;
     }
 
+    public double getSoTien() {
+        return soTien;
+    }
+
+    public void setSoTien(double soTien) {
+        this.soTien = soTien;
+    }
+
     public NhanVien getMaNhanVien() {
         return maNhanVien;
     }
@@ -71,19 +83,11 @@ public class KhenThuong {
         this.maNhanVien = maNhanVien;
     }
 
-    public float getSoTien() {
-        return soTien;
-    }
-
-    public void setSoTien(float soTien) {
-        this.soTien = soTien;
-    }
-
     @Override
     public String toString() {
         return "KhenThuong [id=" + id + ", maKhenThuong=" + maKhenThuong + ", ngayKhenThuong=" + ngayKhenThuong
-                + ", loai=" + loai + ", maNhanVien=" + maNhanVien + ", soTien=" + soTien + "]";
+                + ", loai=" + loai + ", soTien=" + soTien + "]";
     }
-    
+
     
 }
