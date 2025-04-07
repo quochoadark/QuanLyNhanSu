@@ -17,7 +17,6 @@ public class TangCa {
     private String maTangCa; 
     private LocalDate ngayTangCa;
     private int soGioTangCa; 
-    private double heSoTangCa; 
      @ManyToOne
     @JoinColumn(name = "maChamCong_id")
     private ChamCong maChamCong;
@@ -26,12 +25,11 @@ public class TangCa {
 
     }
 
-    public TangCa(long id, String maTangCa, LocalDate ngayTangCa, int soGioTangCa, double heSoTangCa) {
+    public TangCa(long id, String maTangCa, LocalDate ngayTangCa, int soGioTangCa) {
         this.id = id;
         this.maTangCa = maTangCa;
         this.ngayTangCa = ngayTangCa;
         this.soGioTangCa = soGioTangCa;
-        this.heSoTangCa = heSoTangCa;
     }
 
     public long getId() {
@@ -66,14 +64,6 @@ public class TangCa {
         this.soGioTangCa = soGioTangCa;
     }
 
-    public double getHeSoTangCa() {
-        return heSoTangCa;
-    }
-
-    public void setHeSoTangCa(double heSoTangCa) {
-        this.heSoTangCa = heSoTangCa;
-    }
-
     public ChamCong getMaChamCong() {
         return maChamCong;
     }
@@ -85,7 +75,7 @@ public class TangCa {
     @Override
     public String toString() {
         return "TangCa [id=" + id + ", maTangCa=" + maTangCa + ", ngayTangCa=" + ngayTangCa + ", soGioTangCa="
-                + soGioTangCa + ", heSoTangCa=" + heSoTangCa + "]";
+                + soGioTangCa + "]";
     }
     
     

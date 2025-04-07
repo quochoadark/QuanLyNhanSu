@@ -16,7 +16,7 @@ public class PhongBan {
     private String maPhongBan; 
     private String tenPhongBan;
     private String moTa;
-    private String ngươiTao; 
+    private String nguoiTao; 
     private LocalDate ngayTao;
      @OneToMany(mappedBy = "maPhongBan")
     List<NhanVien> maNhanVienPB; 
@@ -25,12 +25,12 @@ public class PhongBan {
 
     }
 
-    public PhongBan(long id, String maPhongBan, String tenPhongBan, String moTa, String ngươiTao, LocalDate ngayTao) {
+    public PhongBan(long id, String maPhongBan, String tenPhongBan, String moTa, String nguoiTao, LocalDate ngayTao) {
         this.id = id;
         this.maPhongBan = maPhongBan;
         this.tenPhongBan = tenPhongBan;
         this.moTa = moTa;
-        this.ngươiTao = ngươiTao;
+        this.nguoiTao = nguoiTao;
         this.ngayTao = ngayTao;
     }
 
@@ -66,12 +66,12 @@ public class PhongBan {
         this.moTa = moTa;
     }
 
-    public String getNgươiTao() {
-        return ngươiTao;
+    public String getNguoiTao() {
+        return nguoiTao;
     }
 
-    public void setNgươiTao(String ngươiTao) {
-        this.ngươiTao = ngươiTao;
+    public void setNguoiTao(String nguoiTao) {
+        this.nguoiTao = nguoiTao;
     }
 
     public LocalDate getNgayTao() {
@@ -93,7 +93,7 @@ public class PhongBan {
     @Override
     public String toString() {
         return "PhongBan [id=" + id + ", maPhongBan=" + maPhongBan + ", tenPhongBan=" + tenPhongBan + ", moTa=" + moTa
-                + ", ngươiTao=" + ngươiTao + ", ngayTao=" + ngayTao + "]";
+                + ", ngươiTao=" + nguoiTao + ", ngayTao=" + ngayTao + "]";
     }
 
     

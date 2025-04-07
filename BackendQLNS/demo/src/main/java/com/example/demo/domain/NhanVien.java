@@ -17,8 +17,8 @@ public class NhanVien {
     private long id;
     private String ho;
     private String ten;
-    private boolean  gioiTinh;
-    private int dienThoai; 
+    private String gioiTinh;
+    private String dienThoai; 
     private String diaChi;
     private String danToc;
     private String queQuan; 
@@ -55,7 +55,7 @@ public class NhanVien {
 
     }
 
-    public NhanVien(long id, String ho, String ten, boolean gioiTinh, int dienThoai, String diaChi, String danToc,
+    public NhanVien(long id, String ho, String ten, String gioiTinh, String dienThoai, String diaChi, String danToc,
             String queQuan) {
         this.id = id;
         this.ho = ho;
@@ -90,20 +90,19 @@ public class NhanVien {
     public void setTen(String ten) {
         this.ten = ten;
     }
-
-    public boolean isGioiTinh() {
+    public String getGioiTinh() {
         return gioiTinh;
     }
 
-    public void setGioiTinh(boolean gioiTinh) {
+    public void setGioiTinh(String gioiTinh) {
         this.gioiTinh = gioiTinh;
     }
 
-    public int getDienThoai() {
+    public String getDienThoai() {
         return dienThoai;
     }
 
-    public void setDienThoai(int dienThoai) {
+    public void setDienThoai(String dienThoai) {
         this.dienThoai = dienThoai;
     }
 
@@ -222,7 +221,8 @@ public class NhanVien {
     @Override
     public String toString() {
         return "NhanVien [id=" + id + ", ho=" + ho + ", ten=" + ten + ", gioiTinh=" + gioiTinh + ", dienThoai="
-                + dienThoai + ", diaChi=" + diaChi + ", danToc=" + danToc + ", queQuan=" + queQuan + "]";
+                + dienThoai + ", diaChi=" + diaChi + ", danToc=" + danToc + ", queQuan=" + queQuan + ", maTrinhDo="
+                + maTrinhDo + ", maChucVu=" + maChucVu + ", maNhanVien=" + maNhanVien + "]";
     }
 
     
