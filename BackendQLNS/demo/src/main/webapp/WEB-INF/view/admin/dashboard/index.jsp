@@ -198,20 +198,20 @@
                                         <li class="">
                                             <a href="/admin/xemnhanvien"> Danh sách nhân viên</a>
                                         </li>
-                                        <li class="Menu-DSPB">
-                                            <a href=""> Danh sách phòng ban</a>
+                                        <li class="">
+                                            <a href="/admin/xemphongban"> Danh sách phòng ban</a>
                                         </li>
-                                        <li class="Menu-DSCV">
-                                            <a href=""> Danh sách chức vụ</a>
+                                        <li class="">
+                                            <a href="/admin/xemchucvu"> Danh sách chức vụ</a>
                                         </li>
-                                        <li class="Menu-DSTD">
-                                            <a href=""> Danh sách trình độ</a>
+                                        <li class="">
+                                            <a href="/admin/xemtrinhdo"> Danh sách trình độ</a>
                                         </li>
-                                        <li class="Menu-DSCM">
-                                            <a href=""> Danh sách chuyên môn</a>
+                                        <li class="">
+                                            <a href="/admin/xemchuyenmon"> Danh sách chuyên môn</a>
                                         </li>
-                                        <li class="Menu-DSBC">
-                                            <a href=""> Danh sách bằng cấp</a>
+                                        <li class="">
+                                            <a href="/admin/xembangcap"> Danh sách bằng cấp</a>
                                         </li>
                                     </div>
 
@@ -232,13 +232,13 @@
                                             <a href="/admin/chucvu">Chức vụ</a>
                                         </li>
                                         <li class="">
-                                            <a href="">Trình độ</a>
+                                            <a href="/admin/trinhdo">Trình độ</a>
                                         </li>
                                         <li class="">
-                                            <a href="">Chuyên môn</a>
+                                            <a href="/admin/chuyenmon">Chuyên môn</a>
                                         </li>
                                         <li class="">
-                                            <a href="">Bằng cấp</a>
+                                            <a href="/admin/bangcap">Bằng cấp</a>
                                         </li>
                                         <li class="">
                                             <a href="/admin/nhanvien">Nhân viên</a>

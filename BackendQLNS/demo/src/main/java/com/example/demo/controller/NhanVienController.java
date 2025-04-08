@@ -45,7 +45,7 @@ public class NhanVienController {
         List<NhanVien> nhanviens = this.nhanvienService.getAllNhanviens();
         model.addAttribute("nhanvien1", nhanviens);
         // Đường dẫn đến thư mục đến file
-        return "client/XemNhanVien";
+        return "client/xemnhanvien";
     }
     @RequestMapping("/admin/nhanvien/create")
     public String getCreatenhanvienPage(Model model) {

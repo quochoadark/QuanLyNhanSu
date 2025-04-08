@@ -37,7 +37,7 @@ public class PhongBanController {
         List<PhongBan> PhongBans = this.PhongBanService.getAllPhongBans();
         model.addAttribute("PhongBan1", PhongBans);
         // Đường dẫn đến thư mục đến file
-        return "client/Xemphongban";
+        return "client/xemphongban";
     }
     @RequestMapping("/admin/phongban/create")
     public String getCreatePhongBanPage(Model model) {

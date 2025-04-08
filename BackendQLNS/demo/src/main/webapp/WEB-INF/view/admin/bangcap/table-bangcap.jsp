@@ -8,7 +8,7 @@
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Table Users</title>
+                <title>Bảng bằng cấp</title>
                 <!-- Latest compiled and minified CSS -->
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,8 +26,8 @@
                     <div class="row">
                         <div class="col-12 mx-auto">
                             <div class="d-flex justify-content-between">
-                                <h3>Table users</h3>
-                                <a href="/admin/user/create" class="btn btn-primary">Create a user</a>
+                                <h3>Bảng bằng cấp</h3>
+                                <a href="/admin/bangcap/create" class="btn btn-primary">Tạo bằng cấp</a>
                             </div>
 
                             <hr />
@@ -35,25 +35,30 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Email</th>
-                                        <th>Full Name</th>
-                                        <th>Action</th>
+                                        <th>Mã bằng cấp</th>
+                                        <th>Tên bằng cấp</th>
+                                        <th>Mô tả</th>
+                                        <th>Người tạo</th>
+                                        <th>Ngày tạo</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- c for each (sử dụng vòng lặp để in ra): dùng để hiển thị danh sách user 
-                                        var = user là từng thằng user  (biến i = 1) 
+                                    <!-- c for each (sử dụng vòng lặp để in ra): dùng để hiển thị danh sách bangcap 
+                                        var = bangcap là từng thằng bangcap  (biến i = 1) 
                                     -->
-                                    <c:forEach var="user" items="${users1}">
+                                    <c:forEach var="bangcap" items="${BangCap1}">
                                         <tr>
-                                            <th>${user.id}</th>
-                                            <td>${user.email}</td>
-                                            <td>${user.fullName}</td>
+                                            <th>${bangcap.id}</th>
+                                            <td>${bangcap.maBangCap}</td>
+                                            <td>${bangcap.tenBangCap}</td>
+                                            <td>${bangcap.moTa}</td>
+                                            <td>${bangcap.nguoiTao}</td>
+                                            <td>${bangcap.ngayTao}</td>
                                             <td>
-                                                <a href="/admin/user/${user.id}" class="btn btn-success">View</a>
-                                                <a href="/admin/user/update/${user.id}"
-                                                    class="btn btn-warning  mx-2">Update</a>
-                                                <a href="/admin/user/delete/${user.id}"
+                                                <a href="/admin/bangcap/${bangcap.id}" class="btn btn-success">View</a>
+                                                <a href="/admin/bangcap/update/${bangcap.id}"
+                                                    class="btn btn-warning mx-2">Update</a>
+                                                <a href="/admin/bangcap/delete/${bangcap.id}"
                                                     class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>

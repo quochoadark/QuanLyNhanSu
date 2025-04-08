@@ -8,7 +8,7 @@
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Table Users</title>
+                <title>Bảng chuyên môn </title>
                 <!-- Latest compiled and minified CSS -->
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,8 +26,8 @@
                     <div class="row">
                         <div class="col-12 mx-auto">
                             <div class="d-flex justify-content-between">
-                                <h3>Table users</h3>
-                                <a href="/admin/user/create" class="btn btn-primary">Create a user</a>
+                                <h3>Bảng chuyên môn </h3>
+                                <a href="/admin/chuyenmon/create" class="btn btn-primary">Tạo chuyên môn </a>
                             </div>
 
                             <hr />
@@ -35,25 +35,31 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Email</th>
-                                        <th>Full Name</th>
-                                        <th>Action</th>
+                                        <th>Mã chuyên môn </th>
+                                        <th>Tên chuyên môn </th>
+                                        <th>Mô tả</th>
+                                        <th>Người tạo</th>
+                                        <th>Ngày tạo</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- c for each (sử dụng vòng lặp để in ra): dùng để hiển thị danh sách user 
-                                        var = user là từng thằng user  (biến i = 1) 
+                                    <!-- c for each (sử dụng vòng lặp để in ra): dùng để hiển thị danh sách chuyenmon 
+                                        var = chuyenmon là từng thằng chuyenmon  (biến i = 1) 
                                     -->
-                                    <c:forEach var="user" items="${users1}">
+                                    <c:forEach var="chuyenmon" items="${ChuyenMon1}">
                                         <tr>
-                                            <th>${user.id}</th>
-                                            <td>${user.email}</td>
-                                            <td>${user.fullName}</td>
+                                            <th>${chuyenmon.id}</th>
+                                            <td>${chuyenmon.maChuyenMon}</td>
+                                            <td>${chuyenmon.tenChuyenMon}</td>
+                                            <td>${chuyenmon.moTa}</td>
+                                            <td>${chuyenmon.nguoiTao}</td>
+                                            <td>${chuyenmon.ngayTao}</td>
                                             <td>
-                                                <a href="/admin/user/${user.id}" class="btn btn-success">View</a>
-                                                <a href="/admin/user/update/${user.id}"
+                                                <a href="/admin/chuyenmon/${chuyenmon.id}"
+                                                    class="btn btn-success">View</a>
+                                                <a href="/admin/chuyenmon/update/${chuyenmon.id}"
                                                     class="btn btn-warning  mx-2">Update</a>
-                                                <a href="/admin/user/delete/${user.id}"
+                                                <a href="/admin/chuyenmon/delete/${chuyenmon.id}"
                                                     class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>

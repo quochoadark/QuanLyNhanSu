@@ -37,7 +37,7 @@ public class ChucVuController {
         List<ChucVu> ChucVus = this.ChucVuService.getAllChucVus();
         model.addAttribute("ChucVu1", ChucVus);
         // Đường dẫn đến thư mục đến file
-        return "client/Xemchucvu";
+        return "client/xemchucvu";
     }
     @RequestMapping("/admin/chucvu/create")
     public String getCreateChucVuPage(Model model) {
